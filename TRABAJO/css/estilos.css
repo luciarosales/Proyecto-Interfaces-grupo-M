@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #161815;
+}
+
+.section-padding {
+    padding: 70px 0;
+}
+
+.carousel-item {
+    height: 80vh; /*ajuste de la pantalla*/
+    min-height: 300px;
+}
+
+.carousel-item img {
+    object-fit: cover; 
+    height: 100%;
+    width: 100%;
+} 
+
+.carousel-caption {
+    bottom: 200px;
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+/*Para añadirle como un filtro a las fotos para q se vea mejor y mas oscuro*/
+.carousel-inner::before { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,30,82,0.327);
+    z-index: 1;
+}
+
+
+/*menu de navegacion*/
+.navbar-nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/*logo*/
+.navbar-dark .navbar-brand {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/*no entiendo pa q sirve no cambia na aparentemente*/
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: black;
+}
+
+/*BUSCADOR*/
+.search_select_box {
+    max-width: 300px;
+    margin: 80px auto;
+}
+
+.search_select_box select {
+    width: 100%;
+}
+
+.search_select_box button {
+    background-color: #080342 !important;
+    padding: 15px 25px;
+    color: black !important; 
+    font-size: 20px;
+}
+
+.w-100 {
+    height: 100vh;
+}
+
+/*En la nav de manera responsiva el recuadro*/
+.navbar-toggler {
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: 0.3;
+}
+
+.services .card-body i {
+    font-size: 50px;
+}
+
+.team .card-body i {
+    font-size: 20px;
+}
+
+.card .img-area img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 200px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Hace que la imagen cubra el área designada */
+}
+
+@media(max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .carousel-item {
+        height: 70vh;
+    }
+
+    .w-100 {
+        height: 70vh;
+    }
+
+    .carousel-caption {
+        bottom: 125px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 17px;
+    }
+
+    .carousel-caption a {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .about-text {
+        padding-top: 50px;
+    }
+
+    .card {
+        margin-bottom: 30px;
+    }
+
+    .section-padding {
+        padding: 50px 0;
+    }
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Málaga Dream Home</title>
+
+    <!--Icono pestaña del navegador-->
+    <link rel="icon" type="favicon2/png" href="./img/favicon2.png">
+
+    <!-- All CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!--iconos bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <!--select del bootstrap-->
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <div class="container">
+            <a href="#" class="navbar-brand"> <span class="text-primary">Málaga</span>DreamHome</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+                aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarS">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Calculadora</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sobre Nosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Gestiona tu propiedad</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div id="carouselE" class="carousel slide" data-bs-ride="carousel">
+        <!--para los indicadores de abajo-->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="1" aria-current="true"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="2" aria-current="true"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="img/FotosMalaga/malagaInicio.jpg" class="d-block w-100" alt="Imagen de la bahía de Málaga">
+                <div class="carousel-caption">
+                    <h5>Bahía de Málaga</h5>
+                    <a href="#" class="btn btn-primary mt-3">Más info</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/FotosMalaga/catedral.jpg" class="d-block w-100" alt="Imagen de la farola de Málaga">
+                <div class="carousel-caption">
+                    <h5>Farola de Málaga</h5>
+                    <a href="#" class="btn btn-primary mt-3">Más info</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/FotosMalaga/callelarios.jpg" class="d-block w-100"
+                    alt="Imagen de la playa de la Malagueta de Málaga">
+                <div class="carousel-caption">
+                    <h5>Malagueta</h5>
+                    <a href="#" class="btn btn-primary mt-3">Más info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- para las flechitas del carrousel-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselE" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+    </div>
+
+
+
+    <div class="search_select_box">
+        <select data-live-search="true">
+            <option>Web Design</option>
+            <option>Web development</option>
+            <option>app development</option>
+            <option>seo</option>
+            <option>Digital Marketing</option>
+
+        </select>
+    </div>
+
+
+
+
+
+
+    <section class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <!--para que sea responsive en modo telefono-->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-img">
+                        <img src="img/favicon.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text text-white">
+                        <h2>Hoteles y playa <br>Servicios</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, aperiam quaerat natus odio
+                            culpa a adipisci possimus dolores dicta, distinctio nostrum. Possimus aut porro dolorem qui
+                            necessitatibus aspernatur veritatis quae.</p>
+                        <a href="#" class="btn btn-primary">Mas Informacion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center text-white pb-5">
+                        <h2>Nuestros servicios</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias reiciendis et mollitia
+                            aliquam incidunt, minima est at sit, <br> ex obcaecati nobis dolorem assumenda fugit
+                            laboriosam,
+                            quos ducimus aliquid totam cumque.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-laptop"></i>
+                            <h3 class="card-title">Registro</h3>
+                            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi minus nisi
+                                quod
+                                repudiandae animi obcaecati nemo est neque eaque, architecto consequuntur
+                                recusandae, pariatur necessitatibus accusamus quibusdam. Placeat eum accusamus
+                                maxime.</p>
+                            <button class="btn bg-primary text-white">Mas Informacion</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-wifi"></i>
+                            <h3 class="card-title">Internet</h3>
+                            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi minus nisi
+                                quod
+                                repudiandae animi obcaecati nemo est neque eaque, architecto consequuntur
+                                recusandae, pariatur necessitatibus accusamus quibusdam. Placeat eum accusamus
+                                maxime.</p>
+                            <button class="btn bg-primary text-white">Mas Informacion</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-tv"></i>
+                            <h3 class="card-title">TV</h3>
+                            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi minus nisi
+                                quod
+                                repudiandae animi obcaecati nemo est neque eaque, architecto consequuntur
+                                recusandae, pariatur necessitatibus accusamus quibusdam. Placeat eum accusamus
+                                maxime.</p>
+                            <button class="btn bg-primary text-white">Mas Informacion</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!--ESTO SIIIIIIIIIIIII es para mostrar las casas-->
+    <section class="portfolio section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center text-white pb-5">
+                        <h2>Playa</h2>
+                        <p>orem, ipsum dolor sit amet consectetur <br>adipisicing elit. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4 mt-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="img/Casas/casa1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3>Playa 1</h3>
+                            <p class="lead"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis in maiores
+                                modi eum harum velit officiis esse facere excepturi earum sint, beatae quasi ab et iure
+                                perspiciatis optio ratione placeat?</p>
+                            <button class="btn bg-primary text-white">Mas informacion</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 mt-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="img/Casas/casa2.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3>Playa 2</h3>
+                            <p class="lead"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis in maiores
+                                modi eum harum velit officiis esse facere excepturi earum sint, beatae quasi ab et iure
+                                perspiciatis optio ratione placeat?</p>
+                            <button class="btn bg-primary text-white">Mas informacion</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 mt-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="img/Casas/casa3.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3>Playa 3</h3>
+                            <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis in maiores
+                                modi eum harum velit officiis esse facere excepturi earum sint, beatae quasi ab et iure
+                                perspiciatis optio ratione placeat?</p>
+                            <button class="btn bg-primary text-white">Mas informacion</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 mt-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="img/Casas/casa4.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3>Playa 4</h3>
+                            <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis in maiores
+                                modi eum harum velit officiis esse facere excepturi earum sint, beatae quasi ab et iure
+                                perspiciatis optio ratione placeat?</p>
+                            <button class="btn bg-primary text-white">Mas informacion</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 mt-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="img/Casas/casa5.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3>Playa 5</h3>
+                            <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis in maiores
+                                modi eum harum velit officiis esse facere excepturi earum sint, beatae quasi ab et iure
+                                perspiciatis optio ratione placeat?</p>
+                            <button class="btn bg-primary text-white">Mas informacion</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 mt-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="img/Casas/casa6.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3>Playa 6</h3>
+                            <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis in maiores
+                                modi eum harum velit officiis esse facere excepturi earum sint, beatae quasi ab et iure
+                                perspiciatis optio ratione placeat?</p>
+                            <button class="btn bg-primary text-white">Mas informacion</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="team section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center text-white pb-5">
+                        <h2>Asesores</h2>
+                        <p>orem ipsum, dolor sit amet consectetur adipisicing elit. <br> Omnis in maiores
+                            modi eum harum velit off</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center bg-dark">
+                        <div class="card-body text-white">
+                            <img src="img/persona.jpg" class="img-fluid rounded-circle" alt="">
+                            <h3 class="card-title py-2">Lorem</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                                nullasaepe!</p>
+                            <p class="socials">
+                                <i class="bi bi-twitter text-white mx-1"></i>
+                                <i class="bi bi-facebook text-white mx-1"></i>
+                                <i class="bi bi-linkedin text-white mx-1"></i>
+                                <i class="bi bi-instagram text-white mx-1"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact section-padding">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center text-white pb-5">
+                        <h2>Contacto</h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum natus possimus quos
+                            quibusdam illum deleniti voluptas atque quia molestias <br>cumque minima eos ullam, aliquid
+                            fugit ducimus voluptates, rerum, in nemo?
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0">
+                <!--padding : p (padding derecha) pt (padding top) pb (padding bottom)-->
+                <div class="col-md-12 p-0 pt-4 pb-4">
+                    <form action="#" class="bg-dark p-4 m-auto">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="text" class="fore-control" placeholder="Nombre">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="email" class="fore-control" placeholder="Correo">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <textarea class="form-control" placeholder="Mensaje" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <!--mt : margen del top -->
+                            <button class="btn btn-primary btn-lg btn-blovk mt-3">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white">Playas de Málaga</p>
+        </div>
+    </footer>
+
+
+    <!-- All Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+
+</body>
+
+</html>
