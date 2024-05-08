@@ -44,21 +44,11 @@
 }
 
 /*BUSCADOR*/
-.search_select_box {
-    max-width: 300px;
-    margin: 80px auto;
-}
-
-.search_select_box select {
-    width: 100%;
-}
-
-/*no va*/
-.search_select_box button {
-    background-color: #080342 !important;
-    padding: 15px 25px;
-    color: black !important; 
-    font-size: 20px;
+.filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12vh;
 }
 
 .w-100 {
