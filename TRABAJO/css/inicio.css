@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-*{
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background: #161815;
-}
+@import url("estilosComunes.css");
 
 .section-padding {
     padding: 70px 0;
@@ -23,16 +15,20 @@ body {
     width: 100%;
 } 
 
-.carousel-caption {
-    bottom: 200px;
-    z-index: 2;
-}
 
+/*para el texto del carrusel*/
+.carousel-caption {
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+}
 .carousel-caption h5 {
-    font-size: 45px;
+    font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 25px;
 }
 
 /*Para añadirle como un filtro a las fotos para q se vea mejor y mas oscuro*/
@@ -47,28 +43,6 @@ body {
     z-index: 1;
 }
 
-
-/*menu de navegacion*/
-.navbar-nav a {
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-/*logo*/
-.navbar-dark .navbar-brand {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-/*no entiendo pa q sirve no cambia na aparentemente*/
-.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
-    color: black;
-}
-
 /*BUSCADOR*/
 .search_select_box {
     max-width: 300px;
@@ -79,6 +53,7 @@ body {
     width: 100%;
 }
 
+/*no va*/
 .search_select_box button {
     background-color: #080342 !important;
     padding: 15px 25px;
@@ -90,12 +65,6 @@ body {
     height: 100vh;
 }
 
-/*En la nav de manera responsiva el recuadro*/
-.navbar-toggler {
-    padding: 1px 5px;
-    font-size: 18px;
-    line-height: 0.3;
-}
 
 .services .card-body i {
     font-size: 50px;
@@ -111,10 +80,14 @@ body {
     object-fit: cover; /* Hace que la imagen cubra el área designada */
 }
 
+
+
+/*el media sirve para conjunto de estilos que se aplicarán 
+cuando el ancho de la pantalla sea de 767 píxeles o menos. 
+Es común utilizar este tipo de consultas para hacer que un sitio 
+web sea más receptivo y se adapte a diferentes tamaños de pantalla, 
+como los de dispositivos móviles.*/
 @media(max-width: 767px) {
-    .navbar-nav {
-        text-align: center;
-    }
 
     .carousel-item {
         height: 70vh;
@@ -148,4 +121,6 @@ body {
     .section-padding {
         padding: 50px 0;
     }
+
+   
 }
