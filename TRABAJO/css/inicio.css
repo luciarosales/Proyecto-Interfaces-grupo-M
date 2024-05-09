@@ -70,6 +70,37 @@
     object-fit: cover; /* Hace que la imagen cubra el área designada */
 }
 
+.filtro-container {
+    background-color: #f0f0f0; /* Color de fondo del contenedor de filtros */
+    padding: 20px; /* Espaciado interior */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Borde redondeado */
+    margin-bottom: 20px; /* Margen inferior */
+}   
+
+.filtro-content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Distribuye los filtros en tres columnas */
+    gap: 10px; /* Espaciado entre filtros */
+}
+
+.filtro-content label {
+    margin-bottom: 5px; /* Ajusta el margen inferior de las etiquetas */
+}
+
+
+
+.filtro-content button {
+    width: 100%; /* Ajusta el ancho del botón al 100% */
+}
+
+.small-input {
+    width: 80px; /* Ancho de los campos de entrada */
+    margin-right: 5px; /* Margen derecho */
+}
+
+
+
 
 
 /*el media sirve para conjunto de estilos que se aplicarán 
