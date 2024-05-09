@@ -11,21 +11,22 @@
             let height = 0;
             let answer = question.nextElementSibling; //coge el hermano es decir el siguiente elem, por ej el siguiente elem de h3 es p, por lo q answer == p
             let addPadding = question.parentElement.parentElement;
-
+            
             addPadding.classList.toggle('questions__padding--add');
 
             //obtengo el 1º hijo == span y obtengo las clases del span y le añado o quito segun si tiene, vamos lo q hace es q la flchea gire
             question.children[0].classList.toggle('questions__arrow--rotate');
 
-            if(answer.clientHeight === 0){ //si el tamaño es igual a 0 es q esta cerrado
-                height = answer.scrollHeight; //para q tenga el alto minimo y se muestre el mensaje bien
+           if(answer.style.visibility === "visible"){ 
+                answer.style.visibility="hidden"; 
+            }else{
+                answer.style.visibility = "visible";
+                height = answer.scrollHeight;
+                addPadding.computedStyleMap.height = `${height}px`;
             }
 
-            //le doy el tam height al answer, es decir al p
-            answer.computedStyleMap.height = `${height}px`
         });
     });
-
 })();
 
 

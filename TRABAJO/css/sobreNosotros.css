@@ -4,6 +4,7 @@
 
 /*SOLUCIONARRRRRRR NO SE ESCONDE LA RESPUESTA COÑO*/
 
+
 .questions {
     text-align: center;
     color: white;
@@ -22,6 +23,7 @@
     transition: padding .3s;
     border: 1px solid white;
     border-radius: 6px;
+    height: 15vh;
 }
 
 /*modificador, se agrega dinamicamente*/
@@ -39,7 +41,6 @@
 
 .questions__answer {
     padding: 0 30px 30px;
-    overflow: hidden;
 }
 
 .questions__arrow {
@@ -63,6 +64,8 @@
     text-align: left;
     height: 0;
     transition: height .3s;
+    visibility: hidden;
+
 }
 
 .questions__i {
