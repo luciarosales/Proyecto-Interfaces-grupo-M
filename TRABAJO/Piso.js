@@ -88,29 +88,7 @@ function aplicarFiltros() {
     );
 
     generateHTMLForPisos(pisosFiltrados);
-}
-
-function aplicarFiltros() {
-    const inputs = document.querySelectorAll('.large-input, .small-input');
-
-    let allFieldsCompleted = true;
-
-    inputs.forEach(input => {
-        if (input.hasAttribute('required') && input.value.trim() === '') {
-            allFieldsCompleted = false;
-            input.classList.add('error');
-        } else {
-            input.classList.remove('error');
-        }
-    });
-
-    if (!allFieldsCompleted) {
-        alert('Por favor complete todos los campos obligatorios.');
-        return;
     }
-
-    
-}
 
 
 // Function to navigate to the detailed information page of a floor
