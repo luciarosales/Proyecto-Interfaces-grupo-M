@@ -56,13 +56,31 @@
 }
 
 
+
+.required {
+    color: red; /* Color rojo para los asteriscos */
+    margin-left: 5px; /* Espacio entre la etiqueta y el asterisco */
+}
+
 .services .card-body i {
     font-size: 50px;
 }
 
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: darkblue;
+  }
 .team .card-body i {
     font-size: 20px;
 }
+
 
 .card .img-area img {
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
