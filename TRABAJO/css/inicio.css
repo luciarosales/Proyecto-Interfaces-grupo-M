@@ -56,7 +56,6 @@
 }
 
 
-
 .services .card-body i {
     font-size: 50px;
 }
@@ -75,8 +74,6 @@ button {
 .team .card-body i {
     font-size: 20px;
 }
-
-
 .card .img-area img {
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
     height: 200px; /* Establece una altura fija para todas las imágenes */
