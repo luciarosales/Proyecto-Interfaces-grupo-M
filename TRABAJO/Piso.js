@@ -18,15 +18,15 @@ class Piso {
 
 // Array de objetos que representan los diferentes pisos (Ejemplo)
 const pisos = [
-    new Piso(1, "Piso 1", "Compra", "Municipio 1", "Piso", 3, 2, 150000, "Distrito 1", 120, "Buen estado", "Descripción del Piso 1",6),
-    new Piso(2, "Piso 2", "Alquiler", "Municipio 2", "Apartamento", 2, 1, 800, "Distrito 2", 90, "Excelente estado", "Descripción del Piso 2",6),
-    new Piso(3, "Piso 3", "Ambos", "Municipio 3", "Casa", 4, 3, 250000, "Distrito 3", 150, "Regular estado", "Descripción del Piso 3",6),
-    new Piso(4, "Piso 4", "Compra", "Municipio 4", "Piso", 2, 1, 120000, "Distrito 4", 100, "Buen estado", "Descripción del Piso 4",6),
-    new Piso(5, "Piso 5", "Alquiler", "Municipio 5", "Apartamento", 1, 1, 600, "Distrito 5", 70, "Excelente estado", "Descripción del Piso 5",6),
-    new Piso(6, "Piso 6", "Compra", "Municipio 6", "Casa", 3, 2, 200000, "Distrito 6", 150, "Regular estado", "Descripción del Piso 6",6),
-    new Piso(7, "Piso 7", "Ambos", "Municipio 7", "Piso", 2, 1, 130000, "Distrito 7", 110, "Buen estado", "Descripción del Piso 7",6),
-    new Piso(8, "Piso 8", "Alquiler", "Municipio 8", "Casa", 4, 3, 1200, "Distrito 8", 180, "Excelente estado", "Descripción del Piso 8",6),
-    new Piso(9, "Piso 9", "Compra", "Municipio 9", "Apartamento", 1, 1, 75000, "Distrito 9", 80, "Regular estado", "Descripción del Piso 9",6)
+    new Piso(1, "Piso en el Centro", "Venta", "Málaga Capital", "Piso", 3, 2, 180000, "Centro Histórico", 110, "Excelente estado", "Acogedor piso en el corazón de Málaga, cerca de todos los servicios y transporte público.", 6),
+    new Piso(2, "Apartamento Playa", "Alquiler", "Torremolinos", "Apartamento", 2, 1, 900, "Playamar", 80, "Buen estado", "Moderno apartamento a solo unos pasos de la playa, con vistas al mar y terraza.", 6),
+    new Piso(3, "Casa Adosada", "Venta", "Benalmádena", "Casa", 4, 3, 280000, "Arroyo de la Miel", 150, "Buen estado", "Espaciosa casa adosada con jardín privado y piscina comunitaria, ideal para familias.", 6),
+    new Piso(4, "Piso con Vistas", "Venta", "Fuengirola", "Piso", 2, 1, 135000, "Los Boliches", 95, "Regular estado", "Luminoso piso con vistas al mar, cerca de la estación de tren y comercios.", 6),
+    new Piso(5, "Estudio en el Centro", "Alquiler", "Málaga Capital", "Apartamento", 1, 1, 650, "Centro Histórico", 55, "Buen estado", "Coqueto estudio en el casco antiguo de Málaga, perfecto para estudiantes o parejas.", 6),
+    new Piso(6, "Chalet con Jardín", "Venta", "Marbella", "Casa", 3, 2, 320000, "Nueva Andalucía", 180, "Excelente estado", "Amplio chalet con jardín privado y piscina, en una zona residencial exclusiva.", 6),
+    new Piso(7, "Piso Reformado", "Venta", "Estepona", "Piso", 2, 1, 145000, "Casco Antiguo", 90, "Excelente estado", "Recién renovado piso en el encantador casco antiguo de Estepona, cerca de la playa y restaurantes.", 6),
+    new Piso(8, "Ático con Terraza", "Alquiler", "Benalmádena", "Apartamento", 2, 2, 1100, "Torrequebrada", 100, "Buen estado", "Ático con amplia terraza y vistas al mar, en una urbanización con piscina y jardines.", 6),
+    new Piso(9, "Apartamento Reformado", "Venta", "Torremolinos", "Apartamento", 1, 1, 85000, "Centro", 60, "Regular estado", "Acogedor apartamento totalmente reformado, cerca de la estación de tren y zonas comerciales.", 6)    
 ];
 
 // Store pisos array in localStorage

@@ -51,6 +51,9 @@
     margin-top: 12vh;
 }
 
+label{
+    color: white;
+}
 .w-100 {
     height: 100vh;
 }
@@ -80,34 +83,51 @@ button {
     object-fit: cover; /* Hace que la imagen cubra el área designada */
 }
 
+/* Estilos para el contenedor del filtro */
 .filtro-container {
-    background-color: #f0f0f0; /* Color de fondo del contenedor de filtros */
-    padding: 20px; /* Espaciado interior */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 5px; /* Borde redondeado */
-    margin-bottom: 20px; /* Margen inferior */
-}   
+    background-color: rgba(44, 42, 42, 0.327);
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
 
+/* Estilos para el contenido del filtro */
 .filtro-content {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Distribuye los filtros en tres columnas */
-    gap: 10px; /* Espaciado entre filtros */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
 }
 
+/* Estilos para las etiquetas del filtro */
 .filtro-content label {
-    margin-bottom: 5px; /* Ajusta el margen inferior de las etiquetas */
+    margin-bottom: 5px;
 }
 
+/* Estilos para los campos de entrada y select del filtro */
+.filtro-content input[type="text"],
+.filtro-content input[type="number"],
+.filtro-content select {
+    width: calc(100% - 10px); /* Resta 10px para compensar el gap entre elementos */
+}
 
-
+/* Estilos para el botón del filtro */
 .filtro-content button {
-    width: 100%; /* Ajusta el ancho del botón al 100% */
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.small-input {
-    width: 80px; /* Ancho de los campos de entrada */
-    margin-right: 5px; /* Margen derecho */
+.filtro-content button:hover {
+    background-color: darkblue;
 }
+
+
+
 
 
 
