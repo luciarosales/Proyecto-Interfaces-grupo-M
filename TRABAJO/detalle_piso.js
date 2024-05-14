@@ -1,56 +1,48 @@
-// Espera a que el contenido del documento esté completamente cargado
-document.addEventListener('DOMContentLoaded', function () {
-    // Obtén el identificador del piso de la URL
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener el ID del piso de la URL
     const urlParams = new URLSearchParams(window.location.search);
-    const pisoId = urlParams.get('pisoId');
+    const pisoId = parseInt(urlParams.get('pisoId'));
 
-    // Llama a una función para obtener los detalles del piso usando su id
-    obtenerDetallesDelPiso(pisoId);
+    // Buscar el piso correspondiente en el conjunto de datos de pisos
+    const pisoSeleccionado = pisos.find(piso => piso.id === pisoId);
+
+    if (pisoSeleccionado) {
+        // Crear elemento para mostrar información del piso
+        var pisoInfoContainer = document.createElement("div");
+        pisoInfoContainer.classList.add("piso-info");
+
+        // Agregar nombre del piso como título
+        var pisoName = document.createElement("h2");
+        pisoName.textContent = pisoSeleccionado.nombre;
+        pisoInfoContainer.appendChild(pisoName);
+
+        // Agregar atributos del piso
+        var pisoAttributes = document.createElement("ul");
+        var attributes = [
+            { label: "Operación", value: pisoSeleccionado.operacion },
+            { label: "Municipio", value: pisoSeleccionado.municipio },
+            { label: "Tipo", value: pisoSeleccionado.tipo },
+            { label: "Nº Habitaciones", value: pisoSeleccionado.numHabitaciones },
+            { label: "Nº Baños", value: pisoSeleccionado.numBanos },
+            { label: "Precio", value: pisoSeleccionado.precio },
+            { label: "Distrito", value: pisoSeleccionado.distrito },
+            { label: "Superficie", value: pisoSeleccionado.superficie },
+            { label: "Estado", value: pisoSeleccionado.estado },
+            { label: "Descripción", value: pisoSeleccionado.descripcion }
+        ];
+
+        attributes.forEach(function(attribute) {
+            var listItem = document.createElement("li");
+            listItem.innerHTML = `<strong>${attribute.label}:</strong> ${attribute.value}`;
+            pisoAttributes.appendChild(listItem);
+        });
+
+        pisoInfoContainer.appendChild(pisoAttributes);
+
+        // Agregar información del piso debajo del carrusel
+        var carouselContainer = document.getElementById("carouselContainer");
+        carouselContainer.appendChild(pisoInfoContainer);
+    } else {
+        console.error('No se encontró ningún piso con el ID proporcionado.');
+    }
 });
-
-// Función para obtener los detalles del piso usando su id
-function obtenerDetallesDelPiso(pisoId) {
-    // Aquí puedes hacer una llamada a un servidor para obtener los detalles del piso
-    // Por ahora, simularemos algunos datos de ejemplo
-
-    const detallesDelPiso = {
-        nombre: "Nombre del Piso",
-        operacion: "Compra",
-        municipio: "Municipio 1",
-        tipo: "Piso",
-        habitaciones: 3,
-        banos: 2,
-        precio: 150000,
-        distrito: "Distrito 1",
-        superficie: 120,
-        estado: "Buen estado",
-        descripcion: "Descripción del piso."
-    };
-
-    // Llama a una función para mostrar los detalles del piso en la página
-    mostrarDetallesDelPiso(detallesDelPiso);
-}
-
-// Función para mostrar los detalles del piso en la página
-function mostrarDetallesDelPiso(detallesDelPiso) {
-    // Obtiene el contenedor donde se mostrarán los detalles del piso
-    const detallePisoContainer = document.getElementById("detallePisoContainer");
-
-    // Crea un HTML con los detalles del piso
-    const detallesHTML = `
-        <h2>${detallesDelPiso.nombre}</h2>
-        <p><strong>Operación:</strong> ${detallesDelPiso.operacion}</p>
-        <p><strong>Municipio:</strong> ${detallesDelPiso.municipio}</p>
-        <p><strong>Tipo:</strong> ${detallesDelPiso.tipo}</p>
-        <p><strong>Número de Habitaciones:</strong> ${detallesDelPiso.habitaciones}</p>
-        <p><strong>Número de Baños:</strong> ${detallesDelPiso.banos}</p>
-        <p><strong>Precio:</strong> ${detallesDelPiso.precio}</p>
-        <p><strong>Distrito:</strong> ${detallesDelPiso.distrito}</p>
-        <p><strong>Superficie:</strong> ${detallesDelPiso.superficie}</p>
-        <p><strong>Estado:</strong> ${detallesDelPiso.estado}</p>
-        <p><strong>Descripción:</strong> ${detallesDelPiso.descripcion}</p>
-    `;
-
-    // Inserta los detalles del piso en el contenedor
-    detallePisoContainer.innerHTML = detallesHTML;
-}
