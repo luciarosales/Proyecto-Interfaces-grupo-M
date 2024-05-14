@@ -85,12 +85,12 @@ function aplicarFiltros() {
     console.log('Habitaciones:', filtroHabitaciones);
     console.log('Baños:', filtroBanos);
 
-    if (!isNaN(filtroPrecioDesde) && !isNaN(filtroPrecioHasta) && filtroPrecioDesde > filtroPrecioHasta) {
+    if (!isNaN(filtroPrecioDesde) && !isNaN(filtroPrecioHasta) && filtroPrecioDesde > filtroPrecioHasta && filtroPrecioDesde<0 && filtroPrecioHasta<0) {
         alert('Error: El precio desde no puede ser superior al precio hasta.');
         return;
     }
 
-    if (!isNaN(filtroSuperficieDesde) && !isNaN(filtroSuperficieHasta) && filtroSuperficieDesde > filtroSuperficieHasta) {
+    if (!isNaN(filtroSuperficieDesde) && !isNaN(filtroSuperficieHasta) && filtroSuperficieDesde > filtroSuperficieHasta && filtroSuperficieDesde<0 && filtroSuperficieHasta<0) {
         alert('Error: La superficie desde no puede ser superior a la superficie hasta.');
         return;
     }
@@ -104,6 +104,7 @@ function aplicarFiltros() {
         alert('Error: El número de baños no puede ser negativo.');
         return;
     }
+    
 
     const pisosFiltrados = pisos.filter(piso =>
         (filtroCalle === '' || piso.nombre.toLowerCase().includes(filtroCalle)) &&
