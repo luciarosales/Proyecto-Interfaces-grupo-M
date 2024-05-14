@@ -18,12 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
         let intMensual;
         let pagoMensual;
         let hipoteca;
+
         dineroPago = valorHipotecario - ahorroAportado;
         numPlazos = plazoAnios * 12;
         intMensual = interes / 12 / 100;
 
+        if (dineroPago <= 0){
+            alert("El ahorro aportado no puede ser mayor al valor hipotecario");
+        } else if (valorHipotecario <= 0 || ahorroAportado < 0 || plazoAnios <= 0 ) {
+            alert("El valor aportado y el plazo en años no pueden ser menores o igual a 0, el ahorro aportado no puede ser menor a 0");
+        } else if (interes < 0){
+            alert("El interés no puede ser menor a 0%");
+        }
+            else {
         pagoMensual = (intMensual * dineroPago) / (1 - Math.pow(1 + intMensual, -numPlazos));
         hipoteca = pagoMensual * numPlazos;
+        }
 
         resultadoHipoteca.innerHTML = `
             <h3>Resultado de la hipoteca</h3>
