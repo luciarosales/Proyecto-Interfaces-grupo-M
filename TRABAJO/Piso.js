@@ -109,7 +109,7 @@ function aplicarFiltros() {
         (filtroCalle === '' || piso.nombre.toLowerCase().includes(filtroCalle)) &&
         (filtroOperacion === 'cualquiera' || piso.operacion.toLowerCase() === filtroOperacion) &&
         (filtroMunicipio === '' || piso.municipio.toLowerCase().includes(filtroMunicipio)) &&
-        (filtroTipo === '' || piso.tipo.toLowerCase().includes(filtroTipo)) &&
+        (filtroTipo === 'cualquiera' || piso.tipo.toLowerCase().includes(filtroTipo)) &&
         (isNaN(filtroHabitaciones) || piso.numHabitaciones === filtroHabitaciones) &&
         (isNaN(filtroBanos) || piso.numBanos === filtroBanos) &&
         (isNaN(filtroPrecioDesde) || piso.precio >= filtroPrecioDesde) &&
