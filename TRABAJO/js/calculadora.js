@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // Captura de los valores de entrada
+        //Captura de los valores de entrada
         const valorHipotecario = parseFloat(document.getElementById('value').value);
         const ahorroAportado = parseFloat(document.getElementById('savings').value);
         const plazoAnios = parseInt(document.getElementById('years').value);
