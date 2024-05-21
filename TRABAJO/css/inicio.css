@@ -83,6 +83,13 @@ button {
     object-fit: cover; /* Hace que la imagen cubra el área designada */
 }
 
+.small-input {
+    width: 100px; /* Adjust the width as needed */
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
 /* Estilos para el contenedor del filtro */
 .filtro-container {
     background-color: rgba(44, 42, 42, 0.327);
@@ -92,11 +99,27 @@ button {
     margin-bottom: 20px;
 }
 
+.filtro-precio{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.label-precio{
+    align-items: end;
+}
+
+#guion{
+    padding-left: 10px;
+}
+
 /* Estilos para el contenido del filtro */
 .filtro-content {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+}
+
+.filtro-content > div {
+    flex: 1 1 30%;
 }
 
 /* Estilos para las etiquetas del filtro */
@@ -126,7 +149,11 @@ button {
     background-color: darkblue;
 }
 
-
+.filtro-precio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 
 

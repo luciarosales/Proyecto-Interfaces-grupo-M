@@ -113,48 +113,72 @@
 <div class="filtro-container">
     <div class="filtro-content">
         <!-- Fila 1 -->
-        <label for="filtroCalle">Calle:</label>
-        <input type="text" id="filtroCalle" class="large-input">
-        <label for="filtroOperacion">Operación:</label>
-        <select id="filtroOperacion" class="large-input">
-            <option value="cualquiera">Cualquiera</option>
-            <option value="compra">Compra</option>
-            <option value="alquiler">Alquiler</option>
-            <option value="ambos">Ambos</option>
-        </select>
-        <label for="filtroMunicipio">Municipio:</label>
-        <input type="text" id="filtroMunicipio" class="large-input">
-        <!-- Fila 2 -->
-        <label for="filtroTipo">Tipo:</label>
-        <select id="filtroTipo">Tipo:</label>
-            <option value="cualquiera">Cualquiera</option>
-            <option value="Piso">Piso</option>
-            <option value="Apartamento">Apartamento</option>
-            <option value="Casa">Casa</option>
+        <div class="filtrocalle">
+            <label for="filtroCalle">Calle:</label>
+            <input type="text" id="filtroCalle" class="small-input">
+        </div>
+        <div class="filtroop">
+            <label for="filtroOperacion">Operación:</label>
+            <select id="filtroOperacion" class="small-input">
+                <option value="cualquiera">Cualquiera</option>
+                <option value="compra">Compra</option>
+                <option value="alquiler">Alquiler</option>
+                <option value="ambos">Ambos</option>
             </select>
-        <label for="filtroHabitaciones">Nº Habitaciones</label>
-        <input type="number" id="filtroHabitaciones" min="0" class="small-input">
-        <label for="filtroBanos">Nº Baños:</label>
-        <input type="number" id="filtroBanos" min="0" class="small-input">
+        </div>
+        <div class="filtromuni">
+            <label for="filtroMunicipio">Municipio:</label>
+            <input type="text" id="filtroMunicipio" class="small-input">
+        </div>
+
+        <!-- Fila 2 -->
+        <div class="filtrotipo">
+            <label for="filtroTipo">Tipo:</label>
+            <select id="filtroTipo" class="small-input">
+                <option value="cualquiera">Cualquiera</option>
+                <option value="Piso">Piso</option>
+                <option value="Apartamento">Apartamento</option>
+                <option value="Casa">Casa</option>
+            </select>
+        </div>
+        <div class="filtrohab">
+            <label for="filtroHabitaciones">Nº Habitaciones</label>
+            <input type="number" id="filtroHabitaciones" min="0" class="small-input">
+        </div>
+        <div class="filtrobanos">
+            <label for="filtroBanos">Nº Baños:</label>
+            <input type="number" id="filtroBanos" min="0" class="small-input">
+        </div>
+
         <!-- Fila 3 -->
-        <label for="filtroPrecioDesde">Precio:</label>
-        <input type="number" id="filtroPrecioDesde" min="0" class="small-input">
-        <label for="filtroPreciohasta">-</label>
+        <div class="filtro-precio">
+            <label for="filtroPrecioDesde" id="labelPrecio">Precio:</label>
+            <input type="number" id="filtroPrecioDesde" min="0" class="small-input">
+            <label for="filtroPrecioHasta" id="guion">-</label>
+            <input type="number" id="filtroPrecioHasta" min="0" class="small-input">
+        </div>
 
-        <input type="number" id="filtroPrecioHasta" min="0" class="small-input">
-        <label for="filtroDistrito">Distrito:</label>
-        <input type="text" id="filtroDistrito" class="large-input">
+        <div class="filtrodistrito">
+            <label for="filtroDistrito">Distrito:</label>
+            <input type="text" id="filtroDistrito" class="small-input">
+        </div>
         <!-- Fila 4 -->
-        <label for="filtroSuperficieDesde">Superficie:</label>
-        <input type="number" id="filtroSuperficieDesde" min="0" class="small-input">
-        <label for="filtroSupHasta">-</label>
-
-        <input type="number" id="filtroSuperficieHasta" min="0" class="small-input">
-        <label for="filtroEstado">Estado:</label>
-        <input type="text" id="filtroEstado" class="large-input">
+        <div class="filtro-precio">
+            <label for="filtroSuperficieDesde">Superficie:</label>
+            <input type="number" id="filtroSuperficieDesde" min="0" class="small-input">
+            <label for="filtroSuperficieHasta" id="guion">-</label>
+            <input type="number" id="filtroSuperficieHasta" min="0" class="small-input">
+        </div>       
     </div>
 </div>
-<button onclick="aplicarFiltros()">Aplicar Filtros</button>
+<div class="container text-center"> <!-- Contenedor adicional para centrar el botón -->
+    <button onclick="aplicarFiltros()" class="btn btn-primary">Aplicar Filtros</button>
+</div>
+
+
+
+
+
 <script src="Piso.js"></script>
 
 
@@ -191,41 +215,36 @@
             </figure>
         </div>
         <div class="box">
-            <p class="mt-4 mb-5"><i class="bi bi-geo-fill"></i>Calle Blvr. Louis Pasteur,35 <br> <i
-                    class="bi bi-phone-fill"></i> 952 13 28 42 <br><i
-                    class="bi bi-envelope-fill"></i> malagadreamhome@gmail.es</p>
+            <p class="mt-4 mb-5"><i class="bi bi-geo-alt"></i> <strong>Dirección:</strong> Calle Larios, Málaga,
+                España</p>
+            <p class="mb-5"><i class="bi bi-telephone"></i> <strong>Teléfono:</strong> 123456789</p>
+            <p class="mb-5"><i class="bi bi-envelope"></i> <strong>Email:</strong> info@malagadreamhome.com</p>
         </div>
-
         <div class="box">
-            <h2>SIGUENOS</h2>
-            <div class="redes-social">
-                <a href="https://www.twitter.com" target="_blank" class="bi bi-twitter"></a>
-                <a href="https://www.facebook.com" target="_blank" class="bi bi-facebook"></a>
-                <a href="https://www.instagram.com" target="_blank" class="bi bi-instagram"></a>
-                <a href="https://www.linkedin.com" target="_blank" class="bi bi-linkedin"></a>
+            <h2 class="mb-5">Síguenos</h2>
+            <div class="red-social">
+                <a href="#" class="bi bi-facebook"></a>
+                <a href="#" class="bi bi-twitter"></a>
+                <a href="#" class="bi bi-instagram"></a>
+                <a href="#" class="bi bi-linkedin"></a>
             </div>
         </div>
     </div>
-
     <div class="grupo-2">
-        <small>
-            &copy;2024 <b>Malaga Dream Home</b> - Todos los derechos reservados -
-        </small>
+        <small>&copy; 2023 <b>MálagaDreamHome</b> - Todos los Derechos Reservados.</small>
     </div>
 </footer>
 
-<!---------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------->
-
 
     <!-- All Js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9gybBogGzOg9QEl6v2IHMQI1zHl6iYkGUfDkSR5iqFyAJ1voB4B" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyX+0PR4mtG0Wv6CGCkQe1kN3I3ZoR5HGL5o7B4pXGcV4Kg0nsMSVDX" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
 </body>
 
 </html>

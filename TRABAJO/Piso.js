@@ -78,19 +78,13 @@ function aplicarFiltros() {
     const filtroSuperficieHasta = parseFloat(document.getElementById("filtroSuperficieHasta").value);
     const filtroEstado = document.getElementById("filtroEstado").value.toLowerCase();
 
-    console.log('Precio Desde:', filtroPrecioDesde);
-    console.log('Precio Hasta:', filtroPrecioHasta);
-    console.log('Superficie Desde:', filtroSuperficieDesde);
-    console.log('Superficie Hasta:', filtroSuperficieHasta);
-    console.log('Habitaciones:', filtroHabitaciones);
-    console.log('Baños:', filtroBanos);
-
-    if (!isNaN(filtroPrecioDesde) && !isNaN(filtroPrecioHasta) && filtroPrecioDesde > filtroPrecioHasta && filtroPrecioDesde<0 && filtroPrecioHasta<0) {
+    // Validaciones
+    if (!isNaN(filtroPrecioDesde) && !isNaN(filtroPrecioHasta) && filtroPrecioDesde > filtroPrecioHasta) {
         alert('Error: El precio desde no puede ser superior al precio hasta.');
         return;
     }
 
-    if (!isNaN(filtroSuperficieDesde) && !isNaN(filtroSuperficieHasta) && filtroSuperficieDesde > filtroSuperficieHasta && filtroSuperficieDesde<0 && filtroSuperficieHasta<0) {
+    if (!isNaN(filtroSuperficieDesde) && !isNaN(filtroSuperficieHasta) && filtroSuperficieDesde > filtroSuperficieHasta) {
         alert('Error: La superficie desde no puede ser superior a la superficie hasta.');
         return;
     }
@@ -104,13 +98,12 @@ function aplicarFiltros() {
         alert('Error: El número de baños no puede ser negativo.');
         return;
     }
-    
 
     const pisosFiltrados = pisos.filter(piso =>
         (filtroCalle === '' || piso.nombre.toLowerCase().includes(filtroCalle)) &&
         (filtroOperacion === 'cualquiera' || piso.operacion.toLowerCase() === filtroOperacion) &&
         (filtroMunicipio === '' || piso.municipio.toLowerCase().includes(filtroMunicipio)) &&
-        (filtroTipo === 'cualquiera' || piso.tipo.toLowerCase().includes(filtroTipo)) &&
+        (filtroTipo === 'cualquiera' || piso.tipo.toLowerCase() === filtroTipo) &&
         (isNaN(filtroHabitaciones) || piso.numHabitaciones === filtroHabitaciones) &&
         (isNaN(filtroBanos) || piso.numBanos === filtroBanos) &&
         (isNaN(filtroPrecioDesde) || piso.precio >= filtroPrecioDesde) &&
@@ -123,6 +116,7 @@ function aplicarFiltros() {
 
     generateHTMLForPisos(pisosFiltrados);
 }
+
 
 // Function to navigate to the detailed information page of a floor
 function verDetallePiso(index) {
