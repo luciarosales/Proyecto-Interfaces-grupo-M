@@ -16,7 +16,7 @@ class Piso {
     }
 }
 
-// Array de objetos que representan los diferentes pisos (Ejemplo)
+// Array de objetos que representan los diferentes pisos 
 const pisos = [
     new Piso(1, "Piso en el Centro", "Compra", "Málaga Capital", "Piso", 3, 2, 180000, "Centro Histórico", 110, "Excelente", "Acogedor piso en el corazón de Málaga, cerca de todos los servicios y transporte público.", 6),
     new Piso(2, "Apartamento Playa", "Alquiler", "Torremolinos", "Apartamento", 2, 1, 900, "Playamar", 80, "Buen", "Moderno apartamento a solo unos pasos de la playa, con vistas al mar y terraza.", 6),
