@@ -27,7 +27,10 @@ const pisos = [
     new Piso(6, "Chalet con Jardín", "Ambos", "Marbella", "Paseo del Sol", "Casa", 3, 2, 320000, "Nueva Andalucía", 180, "Excelente", "Amplio chalet con jardín privado y piscina, en una zona residencial exclusiva.", 6),
     new Piso(7, "Piso Reformado", "Compra", "Estepona", "Calle Molino", "Piso", 2, 1, 145000, "Casco Antiguo", 90, "Excelente", "Recién renovado piso en el encantador casco antiguo de Estepona, cerca de la playa y restaurantes.", 6),
     new Piso(8, "Ático con Terraza", "Alquiler", "Benalmádena", "Calle Romero", "Apartamento", 2, 2, 1100, "Torrequebrada", 100, "Buen", "Ático con amplia terraza y vistas al mar, en una urbanización con piscina y jardines.", 6),
-    new Piso(9, "Apartamento Reformado", "Ambos", "Torremolinos", "Calle Zaragoza", "Apartamento", 1, 1, 85000, "Centro", 60, "Regular", "Acogedor apartamento totalmente reformado, cerca de la estación de tren y zonas comerciales.", 6)
+    new Piso(9, "Apartamento Reformado", "Ambos", "Torremolinos", "Calle Zaragoza", "Apartamento", 1, 1, 85000, "Centro", 60, "Regular", "Acogedor apartamento totalmente reformado, cerca de la estación de tren y zonas comerciales.", 6),
+    new Piso(10, "Casa con Piscina", "Compra", "Mijas", "Calle Algarrobo", "Casa", 4, 3, 350000, "Las Lagunas", 200, "Excelente", "Casa independiente con piscina privada y jardín, en una urbanización tranquila y bien comunicada.", 6),
+    new Piso(11, "Trastero Espacioso", "Alquiler", "Málaga Capital", "Calle Alameda", "Trastero", 0, 0, 70, "Centro Histórico", 10, "Buen", "Trastero en el centro de Málaga, ideal para almacenar objetos y enseres.", 6),
+    new Piso(12, "Local Comercial", "Compra", "Torremolinos", "Calle San Miguel", "Local", 0, 1, 120000, "Centro", 80, "Excelente", "Local comercial en una zona céntrica y con mucho tránsito de personas.", 6),
 ];
 
 // Store pisos array in localStorage
