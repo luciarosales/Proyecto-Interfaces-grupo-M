@@ -139,6 +139,27 @@ function aplicarFiltros() {
     generateHTMLForPisos(pisosFiltrados);
 }
 
+// Function to clear all filters and reset to default state
+function eliminarFiltros() {
+    document.getElementById("filtroEstado").value = 'cualquiera';
+    document.getElementById("filtroOperacion").value = 'cualquiera';
+    document.getElementById("filtroMunicipio").value = '';
+    document.getElementById("filtroTipo").value = 'cualquiera';
+    document.getElementById("filtroHabitaciones").value = '';
+    document.getElementById("filtroBanos").value = '';
+    document.getElementById("filtroPrecioDesde").value = '';
+    document.getElementById("filtroPrecioHasta").value = '';
+    document.getElementById("filtroDistrito").value = '';
+    document.getElementById("filtroSuperficieDesde").value = '';
+    document.getElementById("filtroSuperficieHasta").value = '';
+    
+    // Generar el HTML con todos los pisos, como estado inicial
+    generateHTMLForPisos(pisos);
+}
+
+// Attach the eliminarFiltros function to the 'click' event of the "Eliminar Filtros" button
+document.getElementById('btnEliminarFiltros').addEventListener('click', eliminarFiltros);
+
 
 
 // Function to navigate to the detailed information page of a floor
