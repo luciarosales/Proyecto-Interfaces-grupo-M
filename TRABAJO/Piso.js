@@ -26,7 +26,7 @@ const pisos = [
     new Piso(6, "Chalet con Jardín", "Ambos", "Marbella", "Casa", 3, 2, 320000, "Nueva Andalucía", 180, "Excelente", "Amplio chalet con jardín privado y piscina, en una zona residencial exclusiva.", 6),
     new Piso(7, "Piso Reformado", "Compra", "Estepona", "Piso", 2, 1, 145000, "Casco Antiguo", 90, "Excelente", "Recién renovado piso en el encantador casco antiguo de Estepona, cerca de la playa y restaurantes.", 6),
     new Piso(8, "Ático con Terraza", "Alquiler", "Benalmádena", "Apartamento", 2, 2, 1100, "Torrequebrada", 100, "Buen", "Ático con amplia terraza y vistas al mar, en una urbanización con piscina y jardines.", 6),
-    new Piso(9, "Apartamento Reformado", "Ambos", "Torremolinos", "Apartamento", 1, 1, 85000, "Centro", 60, "Regular", "Acogedor apartamento totalmente reformado, cerca de la estación de tren y zonas comerciales.", 6)    
+    new Piso(9, "Apartamento Reformado", "Ambos", "Torremolinos", "Apartamento", 1, 1, 85000, "Centro", 60, "Regular", "Acogedor apartamento totalmente reformado, cerca de la estación de tren y zonas comerciales.", 6)
 ];
 
 // Store pisos array in localStorage
@@ -41,18 +41,20 @@ function generateHTMLForPisos(pisosMostrados) {
     pisosMostrados.forEach((piso, index) => {
         var foto = "img/Casas/casa" + piso.id + ".jpg";
         const pisoHTML = `
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card text-light text-center bg-dark pb-2">
-                    <div class="card-body text-white">
-                        <div class="img-area mb-4">
-                            <img src="${foto}" class="img-fluid" alt="">
-                        </div>
-                        <h3>${piso.nombre}</h3>
-                        <p class="lead"> ${piso.descripcion}</p>
-                        <a href="detalle_piso.html?pisoId=${piso.id}" class="btn bg-primary text-white" onclick="guardarPisoId(${piso.id})">Más Información</a>
-                    </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card text-light text-center bg-dark pb-2" style="height: 100%;">
+            <div class="card-body text-white">
+                <div class="img-area mb-4">
+                    <img src="${foto}" class="img-fluid" alt="" style="height: 250px; width=300px" >
                 </div>
+                <h3>${piso.nombre}</h3>
+                <p class="lead"> ${piso.descripcion}</p>
             </div>
+            <div style="padding: 10px 10px;">
+                <a href="detalle_piso.html?pisoId=${piso.id}" class="btn bg-primary text-white" style="width: 150px;" onclick="guardarPisoId(${piso.id})">Más Información</a>
+            </div>
+        </div>
+    </div>
         `;
         pisosContainer.innerHTML += pisoHTML;
     });
@@ -83,7 +85,7 @@ function aplicarFiltros() {
         return;
     }
 
-    if ((!isNaN(filtroPrecioDesde) && filtroPrecioDesde < 0) || (!isNaN(filtroPrecioHasta) && filtroPrecioHasta < 0)){
+    if ((!isNaN(filtroPrecioDesde) && filtroPrecioDesde < 0) || (!isNaN(filtroPrecioHasta) && filtroPrecioHasta < 0)) {
         alert('Error: Los precios no pueden ser negativos');
         return;
     }
@@ -93,7 +95,7 @@ function aplicarFiltros() {
         return;
     }
 
-    if ((!isNaN(filtroSuperficieDesde) && filtroSuperficieDesde < 0) || (!isNaN(filtroSuperficieHasta) && filtroSuperficieHasta < 0)){
+    if ((!isNaN(filtroSuperficieDesde) && filtroSuperficieDesde < 0) || (!isNaN(filtroSuperficieHasta) && filtroSuperficieHasta < 0)) {
         alert('Error: Los precios no pueden ser negativos');
         return;
     }

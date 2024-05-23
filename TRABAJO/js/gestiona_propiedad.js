@@ -47,7 +47,37 @@ document.querySelector('form').addEventListener('submit', function(e) {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('form');
+    var submitBtn = document.getElementById('submit-btn');
 
+    function validateForm() {
+        var isValid = true;
+
+        form.querySelectorAll('input, textarea').forEach(function(input) {
+            if (!input.checkValidity()) {
+                input.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                input.classList.remove('is-invalid');
+            }
+        });
+
+        submitBtn.disabled = !isValid;
+    }
+
+    form.addEventListener('input', validateForm);
+    form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        form.classList.add('was-validated');
+    }, false);
+
+    validateForm(); // Initial call to set the initial state of the submit button
+});
 
 
 
