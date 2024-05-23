@@ -1,10 +1,11 @@
 // Define la clase Piso
 class Piso {
-    constructor(id, nombre, operacion, municipio, tipo, numHabitaciones, numBanos, precio, distrito, superficie, estado, descripcion, fotos) {
+    constructor(id, nombre, operacion, municipio, calle, tipo, numHabitaciones, numBanos, precio, distrito, superficie, estado, descripcion, fotos) {
         this.id = id;
         this.nombre = nombre;
         this.operacion = operacion;
         this.municipio = municipio;
+        this.calle = calle;
         this.tipo = tipo;
         this.numHabitaciones = numHabitaciones;
         this.numBanos = numBanos;
@@ -18,15 +19,15 @@ class Piso {
 
 // Array de objetos que representan los diferentes pisos 
 const pisos = [
-    new Piso(1, "Piso en el Centro", "Compra", "Málaga Capital", "Piso", 3, 2, 180000, "Centro Histórico", 110, "Excelente", "Acogedor piso en el corazón de Málaga, cerca de todos los servicios y transporte público.", 6),
-    new Piso(2, "Apartamento Playa", "Alquiler", "Torremolinos", "Apartamento", 2, 1, 900, "Playamar", 80, "Buen", "Moderno apartamento a solo unos pasos de la playa, con vistas al mar y terraza.", 6),
-    new Piso(3, "Casa Adosada", "Compra", "Benalmádena", "Casa", 4, 3, 280000, "Arroyo de la Miel", 150, "Buen", "Espaciosa casa adosada con jardín privado y piscina comunitaria, ideal para familias.", 6),
-    new Piso(4, "Piso con Vistas", "Compra", "Fuengirola", "Piso", 2, 1, 135000, "Los Boliches", 95, "Regular", "Luminoso piso con vistas al mar, cerca de la estación de tren y comercios.", 6),
-    new Piso(5, "Estudio en el Centro", "Alquiler", "Málaga Capital", "Apartamento", 1, 1, 650, "Centro Histórico", 55, "Buen", "Coqueto estudio en el casco antiguo de Málaga, perfecto para estudiantes o parejas.", 6),
-    new Piso(6, "Chalet con Jardín", "Ambos", "Marbella", "Casa", 3, 2, 320000, "Nueva Andalucía", 180, "Excelente", "Amplio chalet con jardín privado y piscina, en una zona residencial exclusiva.", 6),
-    new Piso(7, "Piso Reformado", "Compra", "Estepona", "Piso", 2, 1, 145000, "Casco Antiguo", 90, "Excelente", "Recién renovado piso en el encantador casco antiguo de Estepona, cerca de la playa y restaurantes.", 6),
-    new Piso(8, "Ático con Terraza", "Alquiler", "Benalmádena", "Apartamento", 2, 2, 1100, "Torrequebrada", 100, "Buen", "Ático con amplia terraza y vistas al mar, en una urbanización con piscina y jardines.", 6),
-    new Piso(9, "Apartamento Reformado", "Ambos", "Torremolinos", "Apartamento", 1, 1, 85000, "Centro", 60, "Regular", "Acogedor apartamento totalmente reformado, cerca de la estación de tren y zonas comerciales.", 6)
+    new Piso(1, "Piso en el Centro", "Compra", "Málaga Capital", "Calle Carretería", "Piso", 3, 2, 180000, "Centro Histórico", 110, "Excelente", "Acogedor piso en el corazón de Málaga, cerca de todos los servicios y transporte público.", 6),
+    new Piso(2, "Apartamento Playa", "Alquiler", "Torremolinos", "Calle Granada", "Apartamento", 2, 1, 900, "Playamar", 80, "Buen", "Moderno apartamento a solo unos pasos de la playa, con vistas al mar y terraza.", 6),
+    new Piso(3, "Casa Adosada", "Compra", "Benalmádena", "Avenida de los Reyes", "Casa", 4, 3, 280000, "Arroyo de la Miel", 150, "Buen", "Espaciosa casa adosada con jardín privado y piscina comunitaria, ideal para familias.", 6),
+    new Piso(4, "Piso con Vistas", "Compra", "Fuengirola", "Calle Santa Mónica", "Piso", 2, 1, 135000, "Los Boliches", 95, "Regular", "Luminoso piso con vistas al mar, cerca de la estación de tren y comercios.", 6),
+    new Piso(5, "Estudio en el Centro", "Alquiler", "Málaga Capital", "Calle Beatas", "Apartamento", 1, 1, 650, "Centro Histórico", 55, "Buen", "Coqueto estudio en el casco antiguo de Málaga, perfecto para estudiantes o parejas.", 6),
+    new Piso(6, "Chalet con Jardín", "Ambos", "Marbella", "Paseo del Sol", "Casa", 3, 2, 320000, "Nueva Andalucía", 180, "Excelente", "Amplio chalet con jardín privado y piscina, en una zona residencial exclusiva.", 6),
+    new Piso(7, "Piso Reformado", "Compra", "Estepona", "Calle Molino", "Piso", 2, 1, 145000, "Casco Antiguo", 90, "Excelente", "Recién renovado piso en el encantador casco antiguo de Estepona, cerca de la playa y restaurantes.", 6),
+    new Piso(8, "Ático con Terraza", "Alquiler", "Benalmádena", "Calle Romero", "Apartamento", 2, 2, 1100, "Torrequebrada", 100, "Buen", "Ático con amplia terraza y vistas al mar, en una urbanización con piscina y jardines.", 6),
+    new Piso(9, "Apartamento Reformado", "Ambos", "Torremolinos", "Calle Zaragoza", "Apartamento", 1, 1, 85000, "Centro", 60, "Regular", "Acogedor apartamento totalmente reformado, cerca de la estación de tren y zonas comerciales.", 6)
 ];
 
 // Store pisos array in localStorage

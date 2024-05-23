@@ -36,7 +36,7 @@
                         <a href="index.html" class="nav-link " aria-current="page">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="calculadora.html" class="nav-link">Calculadora</a>
+                        <a href="calculadora.html" class="nav-link">Calcula tu Hipoteca</a>
                     </li>
                     <li class="nav-item">
                         <a href="sobreNosotros.html" class="nav-link">Sobre Nosotros</a>
@@ -48,7 +48,7 @@
             </div>
         </div>
     </nav>
-    <div class="container mt-5">
+    <div class="container mt-5 text-white">
         <h1>Detalles del Piso</h1>
         <div id="detallePisoContainer" class="row">
             <!-- Aquí se llenará la información del piso -->
@@ -144,6 +144,14 @@
                     <tr>
                         <td>Municipio:</td>
                         <td>${pisoSeleccionado.municipio}</td>
+                    </tr>
+                    <tr>
+                        <td>Distrito:</td>
+                        <td>${pisoSeleccionado.distrito}</td>
+                    </tr>
+                    <tr>
+                        <td>Calle:</td>
+                        <td>${pisoSeleccionado.calle}</td>
                     </tr>
                     <tr>
                         <td>Nº Habitaciones:</td>
