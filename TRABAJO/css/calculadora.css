@@ -25,9 +25,8 @@
         transform: translateY(-10px); /* Efecto al pasar el mouse */
     }
 
-    
 
-
+/*PARA LAS VENTANAS FLOTANTES*/
     /* Estilo del modal */
 .modal {
     display: none; /* Por defecto, ocultar el modal */
@@ -52,10 +51,12 @@
 /* Estilo del botón de cierre (×) */
 .close {
     color: #ff0000;
-    float: right;
+    float: right; /* Alinear a la derecha */
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer; /* Cambiar el cursor a puntero para indicar que es interactivo */
 }
+
 
 
 

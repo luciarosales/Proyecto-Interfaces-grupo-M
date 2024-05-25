@@ -61,7 +61,24 @@
     overflow: hidden;
     transition: height 0.3s ease;
     display: none;
+    text-align: justify;
 }
+
+/* Alineación del texto del párrafo dentro del contenedor de preguntas frecuentes */
+.questions__container p {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.questions__container ul{
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
 
 .questions__i {
     display: block;
@@ -74,3 +91,16 @@
     width: 200px;
     height: 200px;
 }
+
+.socials a {
+    color: white; /* Establece el color blanco por defecto */
+    transition: color 0.3s; 
+}
+.socials a:hover {
+    color: cornflowerblue;
+}
+
+
+
+
+
