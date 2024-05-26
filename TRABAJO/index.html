@@ -140,11 +140,22 @@
         <!-- Fila 2 -->
         <div class="filtromuni">
             <label for="filtroMunicipio">Municipio:</label>
-            <input type="text" id="filtroMunicipio" class="small-input">
+            <select id="filtroMunicipio" class="small-input">
+                <option value="cualquiera">Cualquiera</option>
+                <option value="Benalmádena">Benalmádena</option>
+                <option value="Estepona">Estepona</option>
+                <option value="Fuengirola">Fuengirola</option>
+                <option value="Málaga">Málaga</option>
+                <option value="Marbella">Marbella</option>
+                <option value="Mijas">Mijas</option>
+                <option value="Torremolinos">Torremolinos</option>
+            </select>
         </div>
         <div class="filtrodistrito">
-            <label for="filtroDistrito">Distrito:</label>
-            <input type="text" id="filtroDistrito" class="small-input">
+            <label for="filtroDistrito">Distrito (escoja primero un municipio):</label>
+            <select id="filtroDistrito" class="small-input">
+                <option value="cualquiera">Cualquiera</option>
+            </select>
         </div>
         <div class="filtroestado">
             <label for="filtroEstado">Estado del inmueble:</label>
@@ -175,6 +186,10 @@
 <div class="container text-center"> <!-- Contenedor adicional para centrar el botón -->
     <button id="btnEliminarFiltros" class="btn btn-secondary">Eliminar Filtros</button> 
     <button id="btnAplicarFiltros" class="btn btn-primary">Aplicar Filtros</button>
+</div>
+
+<div id="totalPisos" class="container text-center mt-4">
+    <p class="text-white">Total de inmuebles mostrados: <span id="totalPisosCount">0</span></p>
 </div>
 
 

@@ -52,13 +52,5 @@ function showHelpMessage() {
     // Mostrar el mensaje de ayuda
     alert("Todos los campos con el símbolo '*' son obligatorios");
 
-            // Crear un elemento de audio
-        var audioElement = document.createElement('audio');
-
-        // Establecer la ruta del archivo de audio
-        audioElement.setAttribute('src', 'sonidos/Sonido_ventana.mp3');
-
-        // Reproducir el sonido
-        audioElement.play();
 }
 

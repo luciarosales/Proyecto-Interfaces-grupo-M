@@ -119,6 +119,50 @@
             </div>
         </div>
     </div>
+    <div class="row m-0">
+        <div class="col-md-12 p-0 pt-4 pb-4">
+        <p>
+            <h2 style="margin-left: 10px;">¿Quiere más información del inmueble? Contacte con nosotros</h2>
+         </p>
+            <form action="mailto:tu_correo@ejemplo.com" method="post" enctype="text/plain" class="bg-dark p-4 m-auto" novalidate>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label text-white">Nombre <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="nombre" maxlength="189819" required>
+                            <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label text-white">Teléfono <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="telefono" pattern="\d{9}" maxlength="9" required>
+                            <div class="invalid-feedback">Por favor, ingrese un teléfono válido de 9 dígitos.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="correo" class="form-label text-white">Correo <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="correo" maxlength="320" required>
+                            <div class="invalid-feedback">Por favor, ingrese un correo electrónico válido.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label text-white">Mensaje <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                            <div class="invalid-feedback">Por favor, ingrese su mensaje.</div>
+                        </div>
+                    </div>
+                    <button id="submit-btn" class="btn btn-primary btn-lg btn-block mt-3" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="help-icon" onclick="showHelpMessage()">
+        i
+    </div>
 
     <script>
         function obtenerParametroURL(nombre) {
@@ -180,6 +224,72 @@
                 </tbody>
             </table>
         `;
+
+        document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('form');
+    var submitBtn = document.getElementById('submit-btn');
+    var firstAttempt = true;
+
+    function validateField(field) {
+        if (!field.checkValidity()) {
+            field.classList.add('is-invalid');
+            return false;
+        } else {
+            field.classList.remove('is-invalid');
+            return true;
+        }
+    }
+
+    function validateForm() {
+        var isValid = true;
+
+        form.querySelectorAll('input, textarea').forEach(function(input) {
+            if (!validateField(input)) {
+                isValid = false;
+            }
+        });
+
+        submitBtn.disabled = !isValid;
+    }
+
+    form.querySelectorAll('input, textarea').forEach(function(input) {
+        input.addEventListener('input', function() {
+            if (!firstAttempt) {
+                validateField(input);
+                validateForm();
+            }
+        });
+    });
+
+    form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+            firstAttempt = false;
+            validateForm();
+        } else {
+            form.classList.add('was-validated');
+        }
+    }, false);
+});
+
+
+function showHelpMessage() {
+   
+    // Mostrar el mensaje de ayuda
+    alert("Todos los campos con el símbolo '*' son obligatorios");
+
+            // Crear un elemento de audio
+        var audioElement = document.createElement('audio');
+
+        // Establecer la ruta del archivo de audio
+        audioElement.setAttribute('src', 'sonidos/Sonido_ventana.mp3');
+
+        // Reproducir el sonido
+        audioElement.play();
+}
+
+
 
         // Configurar el carrusel
         const carouselInner = document.getElementById("carouselInner");
