@@ -74,7 +74,7 @@ function generateHTMLForPisos(pisosMostrados) {
                 <p>Precio: ${precioTexto}</p>
             </div>
             <div style="padding: 10px 10px;">
-                <a href="detalle_piso.html?pisoId=${piso.id}" class="btn bg-primary text-white" style="width: 150px;" onclick="guardarPisoId(${piso.id})">Más Información</a>
+                <a href="detalle_piso.html?pisoId=${piso.id}" class="btn bg-primary text-white" style="width: 150px;" onclick="guardarPisoId(${piso.id})" aria-label="Más información sobre ${piso.descripcion}">Más Información</a>
             </div>
         </div>
     </div>
