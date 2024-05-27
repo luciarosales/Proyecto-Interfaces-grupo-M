@@ -20,22 +20,6 @@
     #invalid-feedback {
         color: rgb(22, 216, 255);
     }
-    
-    @media(max-width: 767px) {
-
-        #nombre {
-            width: 100%;
-        }
-
-        #telefono {
-            width: 35vh;
-        }
-        
-        #correo {
-            width: 35vh; 
-        }
-
-    }
 
     .help-icon {
         position: fixed;
@@ -54,3 +38,21 @@
         align-items: center;
         font-size: 24px;
     }
+    
+    @media(max-width: 767px) {
+
+        #nombre {
+            width: 100%;
+        }
+
+        #telefono {
+            width: 35vh;
+        }
+        
+        #correo {
+            width: 35vh; 
+        }
+
+    }
+
+    

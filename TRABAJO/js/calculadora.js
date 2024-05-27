@@ -88,3 +88,10 @@ window.addEventListener('click', function(event) {
     }
 });
 
+
+function showHelpMessage() {
+   
+    // Mostrar el mensaje de ayuda
+    alert("Todos los campos con el símbolo '*' son obligatorios");
+
+}

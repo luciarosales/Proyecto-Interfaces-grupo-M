@@ -57,6 +57,23 @@
     cursor: pointer; /* Cambiar el cursor a puntero para indicar que es interactivo */
 }
 
+.help-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffc107; /* Cambiado a amarillo */
+    color: white;
+    border-radius: 50%;
+    padding: 20px;
+    height: 60px; /* Altura del círculo */
+    width: 60px; /* Ancho del círculo */
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
 
 
 
