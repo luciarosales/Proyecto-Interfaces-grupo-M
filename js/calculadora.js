@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
 // Obtener los elementos de los títulos
 var valorHipotecarioTitulo = document.getElementById('valor-hipotecario-titulo');
 var ahorroAportadoTitulo = document.getElementById('ahorro-aportado-titulo');
