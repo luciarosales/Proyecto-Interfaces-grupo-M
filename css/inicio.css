@@ -213,7 +213,8 @@ como los de dispositivos móviles.*/
         width: auto; 
     }
 
-    .filtrotipo {
+    .filtrotipo, .filtro-precio label,
+    .filtro-superficie label {
         width: 30vh;
     }
 

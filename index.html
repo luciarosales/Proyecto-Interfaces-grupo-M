@@ -95,11 +95,11 @@
         <!-- para las flechitas del carrousel-->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev" aria-label="Anterior">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
+            <span class="visually-hidden">Anterior Foto</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselE" data-bs-slide="next" aria-label="Siguiente">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
+            <span class="visually-hidden">Siguiente Foto</span>
         </button>
         
     </div>
@@ -179,6 +179,7 @@
         <div class="filtro-precio">
             <label for="filtroSuperficieDesde">Superficie:</label>
             <input type="number" id="filtroSuperficieDesde" min="0" class="small-input" aria-label="Superficie Minima">
+            <label for="filtroSuperficieHasta" id="guion">-</label>
             <input type="number" id="filtroSuperficieHasta" min="0" class="small-input" aria-label="Superficie Maxima">
         </div>       
     </div>
@@ -190,7 +191,7 @@
 </div>  
 
 <div id="totalPisos" class="container text-center mt-4">
-    <p class="text-white">Total de inmuebles mostrados: <span id="totalPisosCount">0</span></p>
+    <p class="text-white" tabindex="0" aria-label="Total de inmuebles mostrados:">Total de inmuebles mostrados: <span id="totalPisosCount">0</span></p>
 </div>
 
 
