@@ -180,49 +180,62 @@
         const detallePisoTexto = document.getElementById("detallePisoTexto");
         var precio = pisoSeleccionado.operacion === "Alquiler" ? pisoSeleccionado.precio + "€ /mes" : pisoSeleccionado.precio + "€";
         detallePisoTexto.innerHTML = `
-            <h2>${pisoSeleccionado.nombre}</h2>
-            <p>Precio: ${precio}</p>
-            <p>Descripción: ${pisoSeleccionado.descripcion}</p>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td>Municipio:</td>
-                        <td>${pisoSeleccionado.municipio}</td>
-                    </tr>
-                    <tr>
-                        <td>Distrito:</td>
-                        <td>${pisoSeleccionado.distrito}</td>
-                    </tr>
-                    <tr>
-                        <td>Calle:</td>
-                        <td>${pisoSeleccionado.calle}</td>
-                    </tr>
-                    <tr>
-                        <td>Nº Habitaciones:</td>
-                        <td>${pisoSeleccionado.numHabitaciones}</td>
-                    </tr>
-                    <tr>
-                        <td>Nº Baños:</td>
-                        <td>${pisoSeleccionado.numBanos}</td>
-                    </tr>
-                    <tr>
-                        <td>Inmueble:</td>
-                        <td>${pisoSeleccionado.tipo}</td>
-                    </tr>
-                    <tr>
-                        <td>Estado:</td>
-                        <td>${pisoSeleccionado.estado} estado</td>
-                    </tr>
-                    <tr>
-                        <td>Operación:</td>
-                        <td>${pisoSeleccionado.operacion == "Ambos" ? "Compra/Alquiler" : pisoSeleccionado.operacion}</td>
-                    </tr>
-                    <tr>
-                        <td>Superficie:</td>
-                        <td>${pisoSeleccionado.superficie} metros cuadrados</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h1><div id="NombrePiso" class="container text-center mt-4">
+                <p class="text-white" tabindex="0" aria-label="${pisoSeleccionado.nombre}">${pisoSeleccionado.nombre}</p>
+            </div></h1>
+            <p>
+                <div id="precio" class="container text-center mt-4">
+                    <p class="text-white" tabindex="0" aria-label="Precio: ${precio}">Precio: ${precio}</p>
+                </div>
+            </p>
+            <p>
+                <div id="descripcion" class="container text-center mt-4">
+                    <p class="text-white" tabindex="0" aria-label="Descripción: ${pisoSeleccionado.descripcion}">Descripción: ${pisoSeleccionado.descripcion}</p>
+                </div>
+            </p>
+            <table class="table" role="table" tabindex="0">
+    <tbody>
+        <tr>
+            <td role="rowheader" tabindex="0">Municipio:</td>
+            <td role="cell" tabindex="0">${pisoSeleccionado.municipio}</td>
+        </tr>
+        <tr>
+            <td role="rowheader" tabindex="0">Distrito:</td>
+            <td role="cell" tabindex="0">${pisoSeleccionado.distrito}</td>
+        </tr>
+        <tr>
+            <td role="rowheader" tabindex="0">Calle:</td>
+            <td role="cell" tabindex="0">${pisoSeleccionado.calle}</td>
+        </tr>
+        <tr>
+            <td role="rowheader" tabindex="0">Nº Habitaciones:</td>
+            <td role="cell" tabindex="0">${pisoSeleccionado.numHabitaciones}</td>
+        </tr>
+        <tr>
+            <td role="rowheader" tabindex="0">Nº Baños:</td>
+            <td role="cell" tabindex="0">${pisoSeleccionado.numBanos}</td>
+        </tr>
+        <tr>
+            <td role="rowheader" tabindex="0">Inmueble:</td>
+            <td role="cell" tabindex="0">${pisoSeleccionado.tipo}</td>
+        </tr>
+        <tr>
+            <td role="rowheader" tabindex="0">Estado:</td>
+            <td role="cell" tabindex="0">${pisoSeleccionado.estado} estado</td>
+        </tr>
+        <tr>
+            <td role="rowheader" tabindex="0">Operación:</td>
+            <td role="cell" tabindex="0">${pisoSeleccionado.operacion == "Ambos" ? "Compra/Alquiler" : pisoSeleccionado.operacion}</td>
+        </tr>
+        <tr>
+            <td role="rowheader" tabindex="0">Superficie:</td>
+            <td role="cell" tabindex="0">${pisoSeleccionado.superficie} metros cuadrados</td>
+        </tr>
+    </tbody>
+</table>
+
+            
+
         `;
 
         document.addEventListener('DOMContentLoaded', function() {

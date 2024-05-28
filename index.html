@@ -194,6 +194,8 @@
     <p class="text-white" tabindex="0" aria-label="Total de inmuebles mostrados:">Total de inmuebles mostrados: <span id="totalPisosCount">0</span></p>
 </div>
 
+<!-- Mensaje ARIA para lectores de pantalla -->
+<div id="ariaMessage" class="visually-hidden" role="alert" aria-live="assertive"></div>
 
 <script src="js/Piso.js"></script>
 
@@ -209,9 +211,6 @@
 </section>
 
 <script src="Piso.js"></script>
-
-
-
 
  <!---------------------------------------------------------------------------------->
     <!--------------------------------FOOTER-------------------------------------------------->
@@ -258,6 +257,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script>
+        const ariaMessage = document.getElementById('ariaMessage');
+
+        document.getElementById('btnAplicarFiltros').addEventListener('click', function() {
+            // Aquí puedes agregar tu lógica para aplicar los filtros
+
+            // Actualizar el mensaje ARIA
+            ariaMessage.textContent = 'Filtros aplicados';
+            // Forzar reanudar la lectura del mensaje por el lector de pantalla
+            ariaMessage.setAttribute('role', 'alert');
+            ariaMessage.removeAttribute('role');
+            ariaMessage.setAttribute('role', 'alert');
+        });
+
+        document.getElementById('btnEliminarFiltros').addEventListener('click', function() {
+            // Aquí puedes agregar tu lógica para eliminar los filtros
+
+            // Actualizar el mensaje ARIA
+            ariaMessage.textContent = 'Filtros eliminados';
+            // Forzar reanudar la lectura del mensaje por el lector de pantalla
+            ariaMessage.setAttribute('role', 'alert');
+            ariaMessage.removeAttribute('role');
+            ariaMessage.setAttribute('role', 'alert');
+        });
+    </script>
 </body>
 
 </html>
