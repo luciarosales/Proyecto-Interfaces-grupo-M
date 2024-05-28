@@ -26,6 +26,33 @@
     }
 
 
+   /* Estilos para los cuadros de resultado */
+.result-box {
+    background-color: #343a40; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Ocultar inicialmente */
+}
+
+/* Mostrar los recuadros cuando tengan la clase .visible */
+.result-box.visible {
+    display: block;
+}
+
+/* Estilo para el texto */
+.result-box h3,
+.result-box p {
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Añadir clase para campos no válidos */
+.is-invalid {
+    border: 2px solid red;
+}
+
+
 /*PARA LAS VENTANAS FLOTANTES*/
     /* Estilo del modal */
 .modal {
