@@ -47,11 +47,6 @@
     color: #ffffff; /* Texto blanco */
 }
 
-/* Añadir clase para campos no válidos */
-.is-invalid {
-    border: 2px solid red;
-}
-
 
 /*PARA LAS VENTANAS FLOTANTES*/
     /* Estilo del modal */

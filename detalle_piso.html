@@ -160,10 +160,10 @@
         </div>
     </div>
 
-    <div class="help-icon" onclick="showHelpMessage()">
+    <div class="help-icon" role="button" aria-label="Mostrar mensaje de ayuda" tabindex="0" onclick="showHelpMessage()" onkeypress="if(event.key === 'Enter') showHelpMessage()">
         i
     </div>
-
+    
     <script>
         function obtenerParametroURL(nombre) {
             const urlParams = new URLSearchParams(window.location.search);
