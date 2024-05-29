@@ -61,22 +61,28 @@
     background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
 }
 
-/* Estilo del contenido del modal */
 .modal-content {
     background-color: #fefefe; /* Fondo blanco */
     margin: 15% auto; /* Margen superior e inferior y centrar horizontalmente */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Ancho del contenido del modal */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Dirección de flexbox */
 }
 
-/* Estilo del botón de cierre (×) */
+
 .close {
     color: #ff0000;
-    float: right; /* Alinear a la derecha */
     font-size: 28px;
     font-weight: bold;
     cursor: pointer; /* Cambiar el cursor a puntero para indicar que es interactivo */
+    align-self: flex-end; /* Alinear a la derecha */
+}
+
+/* Mover la cruz roja hacia la derecha */
+.close-right {
+    margin-left: auto; /* Mover hacia la derecha */
 }
 
 .help-icon {
