@@ -28,7 +28,7 @@
 
    /* Estilos para los cuadros de resultado */
 .result-box {
-    background-color: #343a40; /* Fondo oscuro */
+    background-color: #525a63; /* Fondo oscuro */
     padding: 20px;
     border-radius: 5px;
     margin-top: 10px;
@@ -72,39 +72,25 @@
 }
 
 
+.contenedor {
+    position: relative; /* El contenedor necesita ser relativo para que el botón se posicione relativo a él */
+}
+
 .close {
     color: #ff0000;
     font-size: 28px;
     font-weight: bold;
-    cursor: pointer; /* Cambiar el cursor a puntero para indicar que es interactivo */
-    align-self: flex-end; /* Alinear a la derecha */
-}
-
-/* Mover la cruz roja hacia la derecha */
-.close-right {
-    margin-left: auto; /* Mover hacia la derecha */
-}
-
-.help-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ffc107; /* Cambiado a amarillo */
-    color: white;
-    border-radius: 50%;
-    padding: 20px;
-    height: 60px; /* Altura del círculo */
-    width: 60px; /* Ancho del círculo */
     cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 10px; /* Ajusta este valor según sea necesario */
+    right: 10px; /* Ajusta este valor para moverlo hacia la derecha */
 }
 
 
 
+
+
+ 
     
     
 

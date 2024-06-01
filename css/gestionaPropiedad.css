@@ -66,17 +66,20 @@
         outline: none;
     }
 
-    .modal-close {
-        position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
-            cursor: pointer;
-            color: red; /* Color rojo */
-            border: none;
-            background-color: transparent;
-            padding: 0;
-            z-index: 1002; /* Asegura que esté encima del botón de ayuda */
+   
+    
+    .contenedor {
+        position: relative; /* El contenedor necesita ser relativo para que el botón se posicione relativo a él */
+    }
+    
+    .close {
+        color: #ff0000;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute; /* Posicionamiento absoluto */
+        top: 10px; /* Ajusta este valor según sea necesario */
+        right: 10px; /* Ajusta este valor para moverlo hacia la derecha */
     }
 
      /* FIN BOTÓN AYUDA*/

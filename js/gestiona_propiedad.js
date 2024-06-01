@@ -60,14 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }, false);
 });
 
-function showHelpMessage() {
-    // Mostrar el mensaje de ayuda
-    alert("Todos los campos con el símbolo '*' son obligatorios");
 
 
-}
 
-//BOTÓN AYUDA
+// BOTÓN AYUDA
+
+// BOTÓN AYUDA
 
 function showModal() {
     // Mostrar el modal
@@ -75,42 +73,34 @@ function showModal() {
     modal.style.display = 'block';
     // Enfocar el contenido del modal
     modal.querySelector('.modal-content').focus();
-    // Capturar el evento de tabulación para redirigir el foco al modal
-    document.addEventListener('keydown', trapTabKey);
+    // Capturar el evento de teclas para redirigir el foco al modal
+    document.addEventListener('keydown', trapKey);
 }
 
 function closeModal() {
     // Cerrar el modal
     var modal = document.getElementById('modal');
     modal.style.display = 'none';
-    // Detener la captura del evento de tabulación
-    document.removeEventListener('keydown', trapTabKey);
+    // Detener la captura del evento de teclas
+    document.removeEventListener('keydown', trapKey);
     // Devolver el foco al botón de ayuda
     document.querySelector('.help-icon').focus();
 }
 
-function trapTabKey(e) {
+function trapKey(e) {
     var modal = document.getElementById('modal');
-    var modalContent = modal.querySelector('.modal-content');
     var focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
     var firstFocusableElement = focusableElements[0];
-    var lastFocusableElement = focusableElements[focusableElements.length - 1];
+    var modalContent = modal.querySelector('.modal-content');
+    var keyCode = e.keyCode || e.which;
 
-    if (e.key === 'Tab') {
-        if (e.shiftKey) {
-            // Si se presiona Shift + Tab, enfocar el último elemento enfocable dentro del modal
-            if (document.activeElement === firstFocusableElement) {
-                e.preventDefault();
-                lastFocusableElement.focus();
-            }
-        } else {
-            // Si se presiona solo Tab, enfocar el primer elemento enfocable dentro del modal
-            if (document.activeElement === lastFocusableElement) {
-                e.preventDefault();
-                firstFocusableElement.focus();
-            }
+    if (keyCode === 9) { // Tabulador
+        if (e.shiftKey && document.activeElement === firstFocusableElement) {
+            e.preventDefault();
+            modalContent.focus(); // Enfocar el contenido del modal
         }
+    } else if (keyCode === 37 || keyCode === 39 || keyCode === 38 || keyCode === 40) { // Flechas izquierda, derecha, arriba o abajo
+        e.preventDefault(); // Evitar el comportamiento predeterminado de las flechas
+        modalContent.focus(); // Enfocar el contenido del modal
     }
 }
-
-//FIN BOTÓN AYUDA
