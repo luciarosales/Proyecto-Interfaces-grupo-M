@@ -55,6 +55,23 @@
                     </div>
                 </div>
             </div>
+
+  
+<!--Botón ayuda-->
+
+            <button class="help-icon" aria-label="Mostrar mensaje de ayuda" onclick="showModal()">i</button>
+
+            <!-- Modal -->
+            <div id="modal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+                <div class="modal-content" tabindex="0">
+                    <h2 id="modalTitle">Mensaje de Ayuda</h2>
+                    <p id="modalDescription">Todos los campos con el símbolo '*' son obligatorios.</p>
+                    <button class="modal-close" onclick="closeModal()" aria-label="Cerrar ventana">×</button>
+                </div>
+            </div>
+        
+<!--Fin Botón ayuda-->
+
             <div class="row m-0">
                 <div class="col-md-12 p-0 pt-4 pb-4">
                     <form action="mailto:iumalagadreamhome@gmail.com" method="post" enctype="text/plain" class="bg-dark p-4 m-auto" novalidate>
@@ -94,10 +111,11 @@
             </div>
         </div>
     </section>
+    
 
-    <div class="help-icon" role="button" aria-label="Mostrar mensaje de ayuda" tabindex="0" onclick="showHelpMessage()" onkeypress="if(event.key === 'Enter') showHelpMessage()">
-        i
-    </div>
+  
+    
+
 
     <footer class="pie-pagina pie-pagina-dark bg-dark mt-5">
         <div class="grupo-1">
