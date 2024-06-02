@@ -65,42 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // BOTÓN AYUDA
 
-// BOTÓN AYUDA
+   function toggleHelp() {
+    var helpContent = document.getElementById('helpContent');
+    helpContent.classList.toggle('active');
+  }
 
-function showModal() {
-    // Mostrar el modal
-    var modal = document.getElementById('modal');
-    modal.style.display = 'block';
-    // Enfocar el contenido del modal
-    modal.querySelector('.modal-content').focus();
-    // Capturar el evento de teclas para redirigir el foco al modal
-    document.addEventListener('keydown', trapKey);
-}
-
-function closeModal() {
-    // Cerrar el modal
-    var modal = document.getElementById('modal');
-    modal.style.display = 'none';
-    // Detener la captura del evento de teclas
-    document.removeEventListener('keydown', trapKey);
-    // Devolver el foco al botón de ayuda
-    document.querySelector('.help-icon').focus();
-}
-
-function trapKey(e) {
-    var modal = document.getElementById('modal');
-    var focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-    var firstFocusableElement = focusableElements[0];
-    var modalContent = modal.querySelector('.modal-content');
-    var keyCode = e.keyCode || e.which;
-
-    if (keyCode === 9) { // Tabulador
-        if (e.shiftKey && document.activeElement === firstFocusableElement) {
-            e.preventDefault();
-            modalContent.focus(); // Enfocar el contenido del modal
-        }
-    } else if (keyCode === 37 || keyCode === 39 || keyCode === 38 || keyCode === 40) { // Flechas izquierda, derecha, arriba o abajo
-        e.preventDefault(); // Evitar el comportamiento predeterminado de las flechas
-        modalContent.focus(); // Enfocar el contenido del modal
-    }
-}
+  //FIN BOTÓN AYUDA //

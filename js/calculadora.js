@@ -105,3 +105,11 @@ window.addEventListener('click', function(event) {
     }
 });
 
+// BOTÓN AYUDA
+
+function toggleHelp() {
+    var helpContent = document.getElementById('helpContent');
+    helpContent.classList.toggle('active');
+  }
+
+  //FIN BOTÓN AYUDA //

@@ -86,7 +86,51 @@
     right: 10px; /* Ajusta este valor para moverlo hacia la derecha */
 }
 
+ /*BOTÓN AYUDA*/
+    
+ .help-button {
+    
+    background-color: #ffc107;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius:50%;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    position: absolute;
+    top: 130px;
+    right: 20px;
+    z-index: 1001;
+    display: flex; /* Hacer que el contenedor sea un flexbox */
+    justify-content: center; /* Centrar horizontalmente el contenido */
+    align-items: center; /* Centrar verticalmente el contenido */
+    
+      }
+    
+      /* Estilo para el icono */
+      .help-icon {
+        font-size: 20px;
+      }
+    
+      
 
+      .help-content {
+        display: none;
+        background-color: #f9f9f9;
+        padding: 10px;
+        position: absolute;
+        top: 120px;
+        right: 70px;
+        border-radius:8px;
+      }
+    
+      /* Estilo para el mensaje cuando estÃ¡ visible */
+      .help-content.active {
+        display: block;
+      }
+
+ /* FIN BOTÓN AYUDA*/
 
 
 

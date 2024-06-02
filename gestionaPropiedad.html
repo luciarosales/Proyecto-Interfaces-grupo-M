@@ -58,17 +58,15 @@
 
   
             <!--BOTÓN AYUDA-->
-            <button class="help-icon" aria-label="Mostrar mensaje de ayuda" onclick="showModal()">i</button>
-
-            <!-- Modal -->
-            <div id="modal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
-                <div class="modal-content" tabindex="0">
-                    <h2 id="modalTitle">Mensaje de Ayuda</h2>
-                    <p id="modalDescription">Todos los campos con el símbolo '*' son obligatorios.</p>
-                    <button class="close" onclick="closeModal()" aria-label="Cerrar ventana">×</button>
-                </div>
-            </div>
-            <!--Fin Botón ayuda-->
+            <button class="help-button" onclick="toggleHelp()">
+                <span class="help-icon">?</span>
+              </button>
+              
+              <!-- Contenido de ayuda -->
+              <div class="help-content" id="helpContent" tabindex="0">
+                <p>Todos los campos con el símbolo '*' son obligatorios.Vuelva a  pulsar el Botón,si quiere cerrar el desplegable</p>
+              </div>
+            <!--Fin BOTÓN AYUDA !-->
 
             <div class="row m-0">
                 <div class="col-md-12 p-0 pt-4 pb-4">
