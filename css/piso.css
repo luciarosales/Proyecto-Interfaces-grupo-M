@@ -96,6 +96,29 @@ td {
     }
 
 
+/* Colores para los encabezados de la tabla */
+.tablaEstilizada th {
+    background-color: #343a40; /* Mismo color de fondo que la barra de navegación */
+    color: white; /* Color de texto blanco */
+}
 
+/* Colores para las celdas de la tabla */
+.tablaEstilizada td {
+    background-color: transparent; /* Fondo transparente para mantener el fondo de la página */
+    color: white; /* Color de texto blanco */
+}
 
+/* Ajuste adicional para la tabla */
+.table {
+    color: white; /* Color de texto blanco para la tabla en general */
+    background-color: transparent; /* Fondo transparente */
+    border-color: white; /* Color de borde blanco */
+}
 
+#info {
+    color: white;
+}
+#tabla-estilo {
+    background-color: #343a40;
+
+}
