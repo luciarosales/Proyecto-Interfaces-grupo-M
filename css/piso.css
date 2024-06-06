@@ -6,10 +6,11 @@
 
 
 .carousel-item img {
-    object-fit: cover; 
-    height: 75%;
-    width: 75%;
-} 
+    height: 400px; /* Ajusta la altura según tus necesidades */
+    width: 100%; /* Se asegura de que las imágenes ocupen todo el ancho del contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
 
 .carousel-caption {
     position: absolute;
@@ -25,7 +26,6 @@
     letter-spacing: 2px;
 }
 
-/* Añade este estilo en tu archivo piso.css */
 h2 {
     color: white;
 }
