@@ -15,6 +15,7 @@
     width: 100%;
 } 
 
+
 /*para el texto del carrusel*/
 .carousel-caption {
     position: absolute;
@@ -22,8 +23,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-}
 
+}
 .carousel-caption h5 {
     font-size: 35px;
     text-transform: uppercase;
@@ -50,22 +51,24 @@
     margin-top: 12vh;
 }
 
-label {
+
+
+label{
     color: white;
 }
-
 .w-100 {
     height: 100vh;
 }
+
 
 .services .card-body i {
     font-size: 50px;
 }
 
+ 
 .team .card-body i {
     font-size: 20px;
 }
-
 .card .img-area img {
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
     height: 200px; /* Establece una altura fija para todas las imágenes */
@@ -88,16 +91,15 @@ label {
     margin-bottom: 20px;
 }
 
-.filtro-precio {
+.filtro-precio{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
-
-.label-precio {
+.label-precio{
     align-items: end;
 }
 
-#guion {
+#guion{
     padding-left: 10px;
 }
 
@@ -145,8 +147,14 @@ label {
     gap: 5px;
 }
 
-/* Media query para dispositivos móviles */
+
+/*el media sirve para conjunto de estilos que se aplicarán 
+cuando el ancho de la pantalla sea de 767 píxeles o menos. 
+Es común utilizar este tipo de consultas para hacer que un sitio 
+web sea más receptivo y se adapte a diferentes tamaños de pantalla, 
+como los de dispositivos móviles.*/
 @media(max-width: 767px) {
+
     .carousel-item {
         height: 70vh;
     }
@@ -165,67 +173,50 @@ label {
         font-size: 15px;
     }
 
-    .about-text {
-        padding-top: 50px;
-    }
-
-    .card {
-        margin-bottom: 30px;
-    }
-
-    .section-padding {
-        padding: 50px 0;
-    }
-
+    
     .filtro-content {
-        flex-direction: column;
+        flex-direction: column; /* Alinear los elementos en columna */
     }
 
     .filtro-content > div {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Que cada div ocupe toda la anchura */
     }
 
     .small-input {
-        width: calc(50% - 10px); 
+        width: 100%; /* Ancho completo para los campos de entrada */
+        margin: 5px 0; /* Margen superior e inferior */
     }
 
     .filtro-precio,
     .filtro-superficie {
-        flex-direction: row; 
+        display: flex;
+        flex-direction: row;
+        gap: 5px; /* Espacio entre los elementos */
     }
 
     .filtro-precio input,
     .filtro-superficie input {
-        width: calc(45% - 5px); 
+        width: 45%; /* Ancho de los campos de entrada */
     }
 
     .filtro-precio label,
     .filtro-superficie label {
-        width: auto; 
+        width: auto; /* Ancho automático para las etiquetas */
     }
 
-    .filtrotipo,
-    .filtro-precio label,
-    .filtro-superficie label {
-        width: 30vh;
+    .filtro-precio {
+        justify-content: space-between; /* Espacio uniforme entre los elementos */
+        align-items: center; /* Alinear los elementos al centro */
     }
 
-    .filtroop,
-    .filtroestado,
-    .filtrohab,
-    .filtrobanos {
-        width: 25vh;
-    }
-
-    .filtromuni,
-    .filtrodistrito {
-        width: 50vh;
-    }
-
-    /* Ajuste para los botones de filtros */
     .filtro-content button {
-        width: calc(50% - 5px); /* 50% de ancho con un pequeño margen entre ellos */
-        margin-right: 5px;
-        margin-bottom: 10px; /* Separación entre los botones */
+        width: 48%; /* Ancho de los botones */
+        margin-right: 0; /* Sin margen a la derecha */
+        margin-bottom: 10px; /* Margen inferior */
     }
+
+    
 }
+
+
+
