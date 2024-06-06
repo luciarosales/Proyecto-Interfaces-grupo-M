@@ -81,6 +81,7 @@
         font-size: 25px;
         top: 350px;
         right: 80px; /* Ajustado a la derecha */
+        display: flex;
     }
 
     .help-icon {
