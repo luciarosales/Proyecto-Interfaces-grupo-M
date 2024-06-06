@@ -215,13 +215,6 @@ como los de dispositivos móviles.*/
         margin-bottom: 10px; /* Margen inferior */
     }
 
-    .filtroop, .filtroestado, .filtrohab, .filtrobanos {
-        width: 25vh;
-    }
-
-    .filtromuni, .filtrodistrito, .filtrotipo{
-        width: 50vh;
-    }
 }
 
 
