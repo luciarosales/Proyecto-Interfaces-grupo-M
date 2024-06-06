@@ -221,3 +221,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnAplicarFiltros = document.getElementById('btnAplicarFiltros');
     btnAplicarFiltros.addEventListener('click', aplicarFiltros);
 });
+

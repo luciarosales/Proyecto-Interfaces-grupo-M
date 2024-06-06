@@ -114,6 +114,20 @@
                     </button>
                 </div>
             </div>
+
+            <!--BOTÓN AYUDA-->
+            <button class="help-button" onclick="toggleHelp()" aria-expanded="false">
+                <span class="help-icon">?</span>
+            </button>
+            
+            <!-- Contenido de ayuda -->
+            <div class="help-content" id="helpContent" tabindex="0" aria-live="polite">
+                <p1>Todos los campos con el símbolo '*' son obligatorios. Vuelva a pulsar el botón si desea cerrar el desplegable.</p1>
+            </div>
+            <!--Fin BOTÓN AYUDA !-->
+
+
+
             <div class="col-md-4" id="detallePisoTexto">
                 <!-- Aquí se llenará la información textual del piso -->
             </div>
@@ -336,7 +350,21 @@
             const modalCarousel = new bootstrap.Carousel(document.getElementById('modalCarousel'));
             modalCarousel.to(slideToIndex);
         });
+
+
+            // BOTÓN AYUDA
+
+            function toggleHelp() {
+                var helpContent = document.getElementById('helpContent');
+                helpContent.classList.toggle('active');
+            }
+
+            //FIN BOTÓN AYUDA //
+
+
     </script>
+
+
 
     <!---------------------------------------------------------------------------------->
     <!--------------------------------FOOTER-------------------------------------------------->

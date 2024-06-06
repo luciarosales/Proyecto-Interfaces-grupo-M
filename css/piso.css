@@ -38,6 +38,11 @@ h4 {
 p {
     color: white;
 }
+
+p1 {
+    color:black;
+}
+
 td {
     color: white;
 }
@@ -106,3 +111,77 @@ td {
     background-color: #343a40;
 
 }
+
+/*BOTÓN AYUDA*/
+.help-button {
+    background-color: #ffc107;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    position: absolute;
+    right: 80px; /* Ajustado a la derecha */
+    top: 750px; /* Ajustado para un mejor diseño responsive */
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para el icono */
+.help-icon {
+    font-size: 20px;
+}
+
+.help-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    position: absolute;
+    top: 750px; /* Ajustado para un mejor diseño responsive */
+    right: calc(80px + 45px + 10px); /* Ajustado para que esté al lado del icono */
+    border-radius: 8px;
+    max-width: 200px; /* Asegura que el contenido no desborde en pantallas pequeñas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadido sombra para mejor visibilidad */
+
+}
+/* Estilo para el mensaje cuando está visible */
+.help-content.active {
+    display: block;
+}
+
+@media(max-width: 767px) {
+    #nombre {
+        width: 100%;
+    }
+
+    #telefono {
+        width: 200px;
+    }
+    
+    #correo {
+        width: 200px; 
+    }
+
+    .help-button {
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+        top: 1200px;
+        right: 40px; /* Ajustado a la derecha */
+    }
+
+    .help-icon {
+        font-size: 16px;
+    }
+
+    .help-content {
+        top: 1200px;
+        font-size: 12px;
+        right: calc(40px + 35px + 10px); /* Ajustado para que estÃ© al lado del icono */
+    }
+}
+
