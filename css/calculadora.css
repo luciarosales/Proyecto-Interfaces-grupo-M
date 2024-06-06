@@ -86,7 +86,7 @@
     right: 10px; /* Ajusta este valor para moverlo hacia la derecha */
 }
 
-   /*BOTÓN AYUDA*/
+/*BOTÓN AYUDA*/
 .help-button {
     background-color: #ffc107;
     color: white;
@@ -96,7 +96,9 @@
     border: none;
     font-size: 36px;
     cursor: pointer;
-    top: 150px; /* Ajustado para un mejor diseño responsive */
+    position: absolute;
+    right: 40px; /* Ajustado a la derecha */
+    top: 600px; /* Ajustado para un mejor diseño responsive */
     z-index: 1001;
     display: flex;
     justify-content: center;
@@ -112,9 +114,11 @@
     display: none;
     background-color: #f9f9f9;
     padding: 10px;
-    top: 150px; /* Ajustado para un mejor diseño responsive */
+    position: absolute;
+    top: 600px; /* Ajustado para un mejor diseño responsive */
+    right: calc(40px + 45px + 10px); /* Ajustado para que esté al lado del icono */
     border-radius: 8px;
-    max-width: 90%; /* Asegura que el contenido no desborde en pantallas pequeñas */
+    max-width: 200px; /* Asegura que el contenido no desborde en pantallas pequeñas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadido sombra para mejor visibilidad */
 }
 
@@ -123,38 +127,35 @@
     display: block;
 }
 
-
-     /* FIN BOTÓN AYUDA*/
-
-    @media(max-width: 767px) {
-
-        #nombre {
-            width: 100%;
-        }
-
-        #telefono {
-            width: 35vh;
-        }
-        
-        #correo {
-            width: 35vh; 
-        }
-
-        .help-button {
-            width: 35px;
-            height: 35px;
-            font-size: 25px;
-            top: 150px;
-       
-        }
-    
-        .help-icon {
-            font-size: 16px;
-        }
-    
-        .help-content {
-            top: 150px;
-            font-size: 12px;
-        }
-
+@media(max-width: 767px) {
+    #nombre {
+        width: 100%;
     }
+
+    #telefono {
+        width: 35vh;
+    }
+    
+    #correo {
+        width: 35vh; 
+    }
+
+    .help-button {
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+        top: 170px;
+        right: 20px; /* Ajustado a la derecha */
+    }
+
+    .help-icon {
+        font-size: 16px;
+    }
+
+    .help-content {
+        top: 170px;
+        font-size: 12px;
+        right: calc(20px + 35px + 10px); /* Ajustado para que esté al lado del icono */
+    }
+}
+
