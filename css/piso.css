@@ -65,34 +65,18 @@ td {
     background-color: #f2f2f2; /* Color de fondo de las celdas del encabezado */
 }
 
-.help-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ffc107; /* Cambiado a amarillo */
-    color: white;
-    border-radius: 50%;
-    padding: 20px;
-    height: 60px; /* Altura del círculo */
-    width: 60px; /* Ancho del círculo */
-    cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-}
+
 
     #nombre {
-        width: 100%;
+        width: 100vh;
     }
 
     #telefono {
-        width: 35vh;
+        width: 200px;
     }
     
     #correo {
-        width: 35vh; 
+        width: 350px; 
     }
 
 
