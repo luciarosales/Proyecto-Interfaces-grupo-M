@@ -118,7 +118,6 @@ td {
     color: white;
     width: 45px;
     height: 45px;
-    border-radius: 50%;
     border: none;
     font-size: 36px;
     cursor: pointer;
@@ -170,7 +169,7 @@ td {
         
             width: 35px;
             height: 35px;
-            border-radius: 50%;
+            border-radius: 0;
             font-size: 25px;
             top: 1600px;
             right: 40px; /* Ajustado a la derecha */
