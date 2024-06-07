@@ -193,7 +193,6 @@ como los de dispositivos móviles.*/
         flex-direction: row;
         gap: 25px; /* Espacio entre los elementos */
         width: 450px;
-
     }
 
     .filtro-content button {
