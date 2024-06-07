@@ -79,12 +79,13 @@
     width: 80%; /* Ancho del contenido del modal */
     display: flex; /* Usar flexbox */
     flex-direction: column; /* Dirección de flexbox */
-}
-
-
-.contenedor {
     position: relative; /* El contenedor necesita ser relativo para que el botón se posicione relativo a él */
 }
+
+.modal-content p {
+    margin-right: 5%; /* Ajusta este valor según sea necesario */
+}
+
 
 .close {
     color: #ff0000;
@@ -94,6 +95,13 @@
     position: absolute; /* Posicionamiento absoluto */
     top: 10px; /* Ajusta este valor según sea necesario */
     right: 10px; /* Ajusta este valor para moverlo hacia la derecha */
+    border: none; /* Eliminar el borde */
+    background: none; /* Eliminar el fondo */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Añadir sombra roja */
+}
+
+.close:hover {
+    color: #922d2d; /* Cambia el color al pasar el cursor */
 }
 
 
@@ -178,5 +186,9 @@
         top: 1250px;
         font-size: 12px;
         right: calc(20px + 35px + 10px); /* Ajustado para que estÃ© al lado del icono */
+    }
+
+    .modal-content p {
+        margin-right: 5%; /* Ajusta este valor según sea necesario */
     }
 }

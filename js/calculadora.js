@@ -73,6 +73,30 @@ function mostrarContenido(parrafo) {
     var modalContentParagraph = document.getElementById('modal-content-paragraph');
     modalContentParagraph.textContent = parrafo;
     document.getElementById('modal').style.display = 'block';
+
+     // Asignar un tabindex alto al contenido del modal para que sea enfocado primero
+     modalContentParagraph.setAttribute('tabindex', '10');
+
+     // Eliminar temporalmente tabindex de otros elementos
+     valorHipotecarioTitulo.removeAttribute('tabindex');
+     ahorroAportadoTitulo.removeAttribute('tabindex');
+     plazoAniosTitulo.removeAttribute('tabindex');
+     tipoInteresTitulo.removeAttribute('tabindex');
+}
+
+// Función para ocultar el contenido del párrafo en la ventana modal
+function ocultarContenido() {
+    document.getElementById('modal').style.display = 'none';
+
+    // Restaurar tabindex de otros elementos
+    valorHipotecarioTitulo.setAttribute('tabindex', '3');
+    ahorroAportadoTitulo.setAttribute('tabindex', '4');
+    plazoAniosTitulo.setAttribute('tabindex', '5');
+    tipoInteresTitulo.setAttribute('tabindex', '6');
+
+    // Eliminar tabindex del contenido del modal
+    var modalContentParagraph = document.getElementById('modal-content-paragraph');
+    modalContentParagraph.removeAttribute('tabindex');
 }
 
 // Asignar eventos de clic a los títulos
@@ -94,14 +118,12 @@ tipoInteresTitulo.addEventListener('click', function() {
 
 // Cerrar el modal haciendo clic en la "x"
 var closeBtn = document.getElementsByClassName('close')[0];
-closeBtn.addEventListener('click', function() {
-    document.getElementById('modal').style.display = 'none';
-});
+closeBtn.addEventListener('click', ocultarContenido);
 
 // Cerrar el modal haciendo clic fuera del contenido
 window.addEventListener('click', function(event) {
     if (event.target == document.getElementById('modal')) {
-        document.getElementById('modal').style.display = 'none';
+        ocultarContenido();
     }
 });
 
@@ -110,6 +132,6 @@ window.addEventListener('click', function(event) {
 function toggleHelp() {
     var helpContent = document.getElementById('helpContent');
     helpContent.classList.toggle('active');
-  }
+}
 
-  //FIN BOTÓN AYUDA //
+// FIN BOTÓN AYUDA //
