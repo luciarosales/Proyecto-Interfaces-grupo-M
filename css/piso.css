@@ -118,6 +118,7 @@ td {
     color: white;
     width: 45px;
     height: 45px;
+    border-radius:50%;
     border: none;
     font-size: 36px;
     cursor: pointer;
