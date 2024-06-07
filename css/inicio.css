@@ -218,10 +218,13 @@ como los de dispositivos móviles.*/
 
     .filtroop, .filtroestado, .filtrohab, .filtrobanos {
         width: 25vh;
+        margin-right: 20%;
     }
 
     .filtromuni, .filtrodistrito, .filtrotipo{
         width: 50vh;
+        margin-right: 20%;
+
     }
 }
 
