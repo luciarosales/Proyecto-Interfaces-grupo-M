@@ -191,8 +191,23 @@ como los de dispositivos móviles.*/
     .filtro-superficie {
         display: flex;
         flex-direction: row;
-        gap: 25px; /* Espacio entre los elementos */
-        width: 450px;
+        gap: 5px; /* Espacio entre los elementos */
+        margin-right: 40%;
+    }
+
+    .filtro-precio input,
+    .filtro-superficie input {
+        width: 45%; /* Ancho de los campos de entrada */
+    }
+
+    .filtro-precio label,
+    .filtro-superficie label {
+        width: auto; /* Ancho automático para las etiquetas */
+    }
+
+    .filtro-precio {
+        justify-content: space-between; /* Espacio uniforme entre los elementos */
+        align-items: center; /* Alinear los elementos al centro */
     }
 
     .filtro-content button {
