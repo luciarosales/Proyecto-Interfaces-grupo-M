@@ -169,6 +169,7 @@ td {
     .help-button {
         width: 35px;
         height: 35px;
+        border-radius: 50%;
         font-size: 25px;
         top: 1600px;
         right: 40px; /* Ajustado a la derecha */
