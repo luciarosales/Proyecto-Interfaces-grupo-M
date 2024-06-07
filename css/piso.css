@@ -124,7 +124,7 @@ td {
     cursor: pointer;
     position: absolute;
     right: 80px; /* Ajustado a la derecha */
-    top: 750px; /* Ajustado para un mejor diseño responsive */
+    top: 1200px; /* Ajustado para un mejor diseño responsive */
     z-index: 1001;
     display: flex;
     justify-content: center;
@@ -141,7 +141,7 @@ td {
     background-color: #f9f9f9;
     padding: 10px;
     position: absolute;
-    top: 750px; /* Ajustado para un mejor diseño responsive */
+    top: 1200px; /* Ajustado para un mejor diseño responsive */
     right: calc(80px + 45px + 10px); /* Ajustado para que esté al lado del icono */
     border-radius: 8px;
     max-width: 200px; /* Asegura que el contenido no desborde en pantallas pequeñas */
@@ -170,7 +170,7 @@ td {
         width: 35px;
         height: 35px;
         font-size: 25px;
-        top: 1200px;
+        top: 1600px;
         right: 40px; /* Ajustado a la derecha */
     }
 
@@ -179,7 +179,7 @@ td {
     }
 
     .help-content {
-        top: 1200px;
+        top: 1600px;
         font-size: 12px;
         right: calc(40px + 35px + 10px); /* Ajustado para que estÃ© al lado del icono */
     }

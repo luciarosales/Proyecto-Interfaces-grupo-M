@@ -115,17 +115,16 @@
                 </div>
             </div>
 
-            <!--BOTÓN AYUDA-->
-            <button class="help-button" onclick="toggleHelp()" aria-expanded="false">
-                <span class="help-icon">?</span>
-            </button>
-            
-            <!-- Contenido de ayuda -->
-            <div class="help-content" id="helpContent" tabindex="0" aria-live="polite">
-                <p1>Todos los campos con el símbolo '*' son obligatorios. Vuelva a pulsar el botón si desea cerrar el desplegable.</p1>
-            </div>
-            <!--Fin BOTÓN AYUDA !-->
-
+                      <!--BOTÓN AYUDA-->
+                      <button class="help-button" onclick="toggleHelp()" aria-expanded="false">
+                        <span class="help-icon">?</span>
+                    </button>
+                    
+                    <!-- Contenido de ayuda -->
+                    <div class="help-content" id="helpContent" tabindex="0" aria-live="polite">
+                        <p1>Todos los campos con el símbolo '*' son obligatorios. Vuelva a pulsar el botón si desea cerrar el desplegable.</p1>
+                    </div>
+                    <!--Fin BOTÓN AYUDA !-->
 
 
             <div class="col-md-4" id="detallePisoTexto">
@@ -138,10 +137,23 @@
         <p>
             <h2 style="margin-left: 10px;" tabindex="0">¿Quiere más información del inmueble? Contacte con nosotros</h2>
          </p>
+
+         <!--BOTÓN AYUDA-->
+         <button class="help-button" onclick="toggleHelp()" aria-expanded="false">
+            <span class="help-icon">?</span>
+        </button>
+        
+        <!-- Contenido de ayuda -->
+        <div class="help-content" id="helpContent" tabindex="0" aria-live="polite">
+            <p1>Todos los campos con el símbolo '*' son obligatorios. Vuelva a pulsar el botón si desea cerrar el desplegable.</p1>
+        </div>
+        <!--Fin BOTÓN AYUDA !-->
+        
          <form action="mailto:iumalagadreamhome@gmail.com" method="post" enctype="text/plain" class="bg-dark p-4 m-auto" novalidate>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="mb-3">
+
+                       <div class="mb-3">
                         <label for="nombre" class="form-label text-white">Nombre <span class="text-danger">*</span></label>
                         <input type="text" class="form-control" id="nombre" aria-required="true" maxlength="189819" required>
                         <div class="invalid-feedback" aria-live="polite">Error: Por favor, ingrese su nombre.</div>
