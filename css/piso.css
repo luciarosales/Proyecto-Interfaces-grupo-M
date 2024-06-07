@@ -167,12 +167,15 @@ td {
     }
 
     .help-button {
-        width: 23px;
-        height: 23px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         font-size: 25px;
         top: 1600px;
         right: 40px; /* Ajustado a la derecha */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .help-icon {
