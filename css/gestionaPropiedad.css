@@ -21,19 +21,20 @@
         color: rgb(22, 216, 255);
     }
 
- /*BOTÓN AYUDA*/
+ 
+/*BOTÓN AYUDA*/
 .help-button {
     background-color: #ffc107;
     color: white;
     width: 45px;
     height: 45px;
-    border-radius: 50%;
+    border-radius:50%;
     border: none;
     font-size: 36px;
     cursor: pointer;
     position: absolute;
-    right: 140px; /* Ajustado a la derecha */
-    top: 350px; /* Ajustado para un mejor diseño responsive */
+    right: 80px; /* Ajustado a la derecha */
+    top: 1200px; /* Ajustado para un mejor diseño responsive */
     z-index: 1001;
     display: flex;
     justify-content: center;
@@ -50,13 +51,13 @@
     background-color: #f9f9f9;
     padding: 10px;
     position: absolute;
-    top: 350px; /* Ajustado para un mejor diseño responsive */
-    right: calc(140px + 45px + 10px); /* Ajustado para que esté al lado del icono */
+    top: 1200px; /* Ajustado para un mejor diseño responsive */
+    right: calc(80px + 45px + 10px); /* Ajustado para que esté al lado del icono */
     border-radius: 8px;
     max-width: 200px; /* Asegura que el contenido no desborde en pantallas pequeñas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadido sombra para mejor visibilidad */
-}
 
+}
 /* Estilo para el mensaje cuando está visible */
 .help-content.active {
     display: block;
@@ -76,12 +77,22 @@
     }
 
     .help-button {
-        width: 35px;
-        height: 35px;
-        font-size: 25px;
-        top: 350px;
-        right: 80px; /* Ajustado a la derecha */
-        display: flex;
+        
+            width: 35px;
+            height: 35px;
+            border-radius:50%;
+            font-size: 25px;
+            top: 1600px;
+            right: 40px; /* Ajustado a la derecha */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            cursor: pointer;
+            box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total del botón */
+            padding: 0; /* Asegura que no haya padding */
+            margin: 0; /* Asegura que no haya margin */
+            border: none; /* Elimina cualquier borde */
     }
 
     .help-icon {
@@ -89,12 +100,11 @@
     }
 
     .help-content {
-        top: 350px;
+        top: 1600px;
         font-size: 12px;
-        right: calc(80px + 35px + 10px); /* Ajustado para que estÃ© al lado del icono */
+        right: calc(40px + 35px + 10px); /* Ajustado para que estÃ© al lado del icono */
     }
 }
-
 
 
     
