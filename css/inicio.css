@@ -192,7 +192,7 @@ como los de dispositivos móviles.*/
         display: flex;
         flex-direction: row;
         gap: 5px; /* Espacio entre los elementos */
-        margin-right: 20%;
+        margin-right: 30%;
     }
 
     .filtro-precio input,
@@ -218,13 +218,10 @@ como los de dispositivos móviles.*/
 
     .filtroop, .filtroestado, .filtrohab, .filtrobanos {
         width: 25vh;
-        margin-right: 20%;
     }
 
     .filtromuni, .filtrodistrito, .filtrotipo{
         width: 50vh;
-        margin-right: 20%;
-
     }
 }
 
