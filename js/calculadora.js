@@ -1,46 +1,91 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form');
+    const form = document.getElementById('hipoteca-form');
     const contenedorResultado = document.getElementById('contenedor-resultado');
     const cuotaMensual = document.getElementById('cuota-mensual');
     const resultadoHipoteca = document.getElementById('resultado-hipoteca');
 
+    function validateField(field) {
+        if (!field.checkValidity()) {
+            field.classList.add('is-invalid');
+            return false;
+        } else {
+            field.classList.remove('is-invalid');
+            return true;
+        }
+    }
+
+    function validateForm() {
+        var isValid = true;
+        form.querySelectorAll('input').forEach(function(input) {
+            if (!validateField(input)) {
+                isValid = false;
+            }
+        });
+        return isValid;
+    }
+
+    form.querySelectorAll('input').forEach(function(input) {
+        input.addEventListener('input', function() {
+            validateField(input);
+        });
+    });
+
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-
-        // Captura de los valores de entrada
         const valorHipotecario = parseFloat(document.getElementById('value').value);
         const ahorroAportado = parseFloat(document.getElementById('savings').value);
         const plazoAnios = parseInt(document.getElementById('years').value);
         const interes = parseFloat(document.getElementById('interest').value);
 
-        // Variables para el cálculo de la hipoteca
-        let dineroPago;
-        let numPlazos;
-        let intMensual;
-        let pagoMensual = 0;
-        let hipoteca = 0;
+        const dineroPago = valorHipotecario - ahorroAportado;
+        const numPlazos = plazoAnios * 12;
+        const intMensual = interes / 12 / 100;
+
         let valid = true;
 
-        dineroPago = valorHipotecario - ahorroAportado;
-        numPlazos = plazoAnios * 12;
-        intMensual = interes / 12 / 100;
-
-        // Validaciones
         if (dineroPago <= 0) {
-            alert("El ahorro aportado no puede ser mayor al valor hipotecario");
+            document.getElementById('savings').setCustomValidity("El ahorro aportado no puede ser mayor al valor hipotecario");
+            validateField(document.getElementById('savings'));
             valid = false;
-        } else if (valorHipotecario <= 0 || ahorroAportado < 0 || plazoAnios <= 0) {
-            alert("El valor aportado y el plazo en años no pueden ser menores o igual a 0, el ahorro aportado no puede ser menor a 0");
-            valid = false;
-        } else if (interes < 0) {
-            alert("El interés no puede ser menor a 0%");
-            valid = false;
+        } else {
+            document.getElementById('savings').setCustomValidity("");
         }
 
-        // Si todos los datos son válidos, se calcula la hipoteca
-        if (valid) {
-            pagoMensual = (intMensual * dineroPago) / (1 - Math.pow(1 + intMensual, -numPlazos));
-            hipoteca = pagoMensual * numPlazos;
+        if (valorHipotecario <= 0) {
+            document.getElementById('value').setCustomValidity("El valor hipotecario debe ser mayor a 0");
+            validateField(document.getElementById('value'));
+            valid = false;
+        } else {
+            document.getElementById('value').setCustomValidity("");
+        }
+
+        if (ahorroAportado < 0) {
+            document.getElementById('savings').setCustomValidity("El ahorro aportado no puede ser menor a 0");
+            validateField(document.getElementById('savings'));
+            valid = false;
+        } else {
+            document.getElementById('savings').setCustomValidity("");
+        }
+
+        if (plazoAnios <= 0) {
+            document.getElementById('years').setCustomValidity("El plazo en años debe ser mayor a 0");
+            validateField(document.getElementById('years'));
+            valid = false;
+        } else {
+            document.getElementById('years').setCustomValidity("");
+        }
+
+        if (interes < 0) {
+            document.getElementById('interest').setCustomValidity("El interés no puede ser menor a 0%");
+            validateField(document.getElementById('interest'));
+            valid = false;
+        } else {
+            document.getElementById('interest').setCustomValidity("");
+        }
+
+        if (valid && validateForm()) {
+            const pagoMensual = (intMensual * dineroPago) / (1 - Math.pow(1 + intMensual, -numPlazos));
+            const hipoteca = pagoMensual * numPlazos;
 
             resultadoHipoteca.innerHTML = `
                 <h3>Resultado de la hipoteca</h3>
@@ -50,17 +95,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p>Cada mes deberás pagar: ${pagoMensual.toFixed(2)} euros</p>
             `;
 
-            // Hacer visible el contenedor de resultado
             contenedorResultado.classList.add('visible');
-
-            // Foco en el resultado de la hipoteca para accesibilidad
             contenedorResultado.focus();
         } else {
-            // Ocultar el contenedor de resultado si los datos no son válidos
             contenedorResultado.classList.remove('visible');
         }
     });
 });
+
 
 // Obtener los elementos de los títulos
 var valorHipotecarioTitulo = document.getElementById('valor-hipotecario-titulo');
