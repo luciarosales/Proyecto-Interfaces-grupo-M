@@ -172,7 +172,7 @@ td {
             height: 35px;
             border-radius:50%;
             font-size: 25px;
-            top: 600px;
+            top: 650px;
             right: 40px; /* Ajustado a la derecha */
             display: flex;
             position:fixed;
@@ -191,7 +191,7 @@ td {
     }
 
     .help-content {
-        top: 600px;
+        top: 650px;
         position:fixed;
         font-size: 12px;
         right: calc(40px + 35px + 10px); /* Ajustado para que estÃ© al lado del icono */
