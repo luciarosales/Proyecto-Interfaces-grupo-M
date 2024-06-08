@@ -190,6 +190,27 @@
     <button id="btnAplicarFiltros" class="btn btn-primary">Aplicar Filtros</button>
 </div>  
 
+<!-- Modal -->
+<div class="modal fade" id="eliminarFiltrosModal" tabindex="-1" aria-labelledby="eliminarFiltrosModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eliminarFiltrosModalLabel">Eliminar Filtros</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" tabindex="0">
+          ¿Estás seguro de querer eliminar los filtros? No habrá vuelta atrás.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="confirmarEliminarFiltros">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
 <div id="totalPisos" class="container text-center mt-4">
     <p class="text-white" tabindex="0" aria-live="polite">Total de inmuebles mostrados: <span id="totalPisosCount" aria-live="assertive">0</span></p>
 </div>
@@ -246,37 +267,12 @@
     <!---------------------------------------------------------------------------------->
     <!---------------------------------------------------------------------------------->
 
-
-
     <!-- All Js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-    <script>
-        const ariaMessage = document.getElementById('ariaMessage');
+    <script src="js/inicio.js"></script>
 
-        document.getElementById('btnAplicarFiltros').addEventListener('click', function() {
-            // Aquí puedes agregar tu lógica para aplicar los filtros
-
-            // Actualizar el mensaje ARIA
-            ariaMessage.textContent = 'Filtros aplicados';
-            // Forzar reanudar la lectura del mensaje por el lector de pantalla
-            ariaMessage.setAttribute('role', 'alert');
-            ariaMessage.removeAttribute('role');
-            ariaMessage.setAttribute('role', 'alert');
-        });
-
-        document.getElementById('btnEliminarFiltros').addEventListener('click', function() {
-            // Aquí puedes agregar tu lógica para eliminar los filtros
-
-            // Actualizar el mensaje ARIA
-            ariaMessage.textContent = 'Filtros eliminados';
-            // Forzar reanudar la lectura del mensaje por el lector de pantalla
-            ariaMessage.setAttribute('role', 'alert');
-            ariaMessage.removeAttribute('role');
-            ariaMessage.setAttribute('role', 'alert');
-        });
-    </script>
 </body>
 
 </html>
