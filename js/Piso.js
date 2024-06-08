@@ -68,13 +68,13 @@ function generateHTMLForPisos(pisosMostrados) {
                 <div class="img-area mb-4">
                     <img src="${foto}" class="img-fluid" alt="" style="height: 250px; width=300px" >
                 </div>
-                <h3>${piso.nombre}</h3>
-                <p class="lead">${piso.descripcion}</p>
-                <p>Superficie: ${piso.superficie} m<sup>2</sup></p>
-                <p>Precio: ${precioTexto}</p>
+                <h3 tabindex="0">${piso.nombre}</h3>
+                <p class="lead" tabindex="0">${piso.descripcion}</p>
+                <p tabindex="0">Superficie: ${piso.superficie} m<sup>2</sup></p>
+                <p tabindex="0">Precio: ${precioTexto}</p>
             </div>
             <div style="padding: 10px 10px;">
-                <a href="detalle_piso.html?pisoId=${piso.id}" class="btn bg-primary text-white" style="width: 150px;" onclick="guardarPisoId(${piso.id})" aria-label="Más información sobre ${piso.descripcion}">Más Información</a>
+                <a href="detalle_piso.html?pisoId=${piso.id}" class="btn bg-primary text-white" style="width: 150px;" onclick="guardarPisoId(${piso.id})" aria-label="Más información sobre ${piso.nombre}">Más Información</a>
             </div>
         </div>
     </div>
