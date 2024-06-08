@@ -115,9 +115,9 @@
     border: none;
     font-size: 36px;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     right: 80px; /* Ajustado a la derecha */
-    top: 800px; /* Ajustado para un mejor diseño responsive */
+    top: 600px; /* Ajustado para un mejor diseño responsive */
     z-index: 1001;
     display: flex;
     justify-content: center;
@@ -133,8 +133,8 @@
     display: none;
     background-color: #f9f9f9;
     padding: 10px;
-    position: absolute;
-    top: 800px; /* Ajustado para un mejor diseño responsive */
+    position: fixed;
+    top: 600px; /* Ajustado para un mejor diseño responsive */
     right: calc(80px + 45px + 10px); /* Ajustado para que esté al lado del icono */
     border-radius: 8px;
     max-width: 200px; /* Asegura que el contenido no desborde en pantallas pequeñas */
@@ -171,6 +171,7 @@
             justify-content: center;
             align-items: center;
             z-index: 1001;
+            position:fixed;
             cursor: pointer;
             box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total del botón */
             padding: 0; /* Asegura que no haya padding */
@@ -184,6 +185,7 @@
 
     .help-content {
         top: 1250px;
+        position: fixed;
         font-size: 12px;
         right: calc(20px + 35px + 10px); /* Ajustado para que estÃ© al lado del icono */
     }
