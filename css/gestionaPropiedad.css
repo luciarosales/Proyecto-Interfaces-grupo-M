@@ -82,7 +82,7 @@
             height: 35px;
             border-radius:50%;
             font-size: 25px;
-            top: 760px;
+            top: 500px;
             right: 40px; /* Ajustado a la derecha */
             display: flex;
             position:fixed;
@@ -101,7 +101,7 @@
     }
 
     .help-content {
-        top: 760px;
+        top: 500px
         position:fixed;
         font-size: 12px;
         right: calc(40px + 35px + 10px); /* Ajustado para que esta al lado del icono */
