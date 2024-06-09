@@ -90,7 +90,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-cash-coin"></i>
-                                    <h3 id="ahorro-aportado-titulo" class="card-title" tabindex="1">Ahorro aportado</h3>
+                                    <h3 id="ahorro-aportado-titulo" class="card-title" tabindex="2">Ahorro aportado</h3>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-calendar2-check-fill"></i>
-                                    <h3 id="plazo-anios-titulo" class="card-title" tabindex="1">Plazo en años</h3>
+                                    <h3 id="plazo-anios-titulo" class="card-title" tabindex="2">Plazo en años</h3>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-graph-up-arrow"></i>
-                                    <h3 id="tipo-interes-titulo" class="card-title" tabindex="1">Tipo de interés</h3>
+                                    <h3 id="tipo-interes-titulo" class="card-title" tabindex="2">Tipo de interés</h3>
                                 </div>
                             </div>
                         </div>
@@ -147,11 +147,11 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-12 col-12 px-lg-4">
                     <div class="about-text text-white" >
-                        <h2>Calculadora de Hipoteca </h2>
+                        <h2 id="calculadora de hipoteca"  tabindex="0">Calculadora de Hipoteca</h2>
                         <form id="hipoteca-form" novalidate>
                             <div class="mb-3">
                                 <label for="value" class="form-label">Valor hipotecario en euros <span class="text-danger" >*</span></label>
-                                <input type="number" class="form-control form-control-sm input-short" id="value" aria-label="Valor hipotecario" >
+                                <input type="number" class="form-control form-control-sm input-short" id="value" aria-label="Valor hipotecario">
                                 <div class="invalid-feedback" aria-live="polite">Error: Por favor, ingrese un valor hipotecario válido.</div>
                             </div>
                             <div class="mb-3">
@@ -169,18 +169,17 @@
                                 <input type="number" class="form-control form-control-sm input-short" id="interest" aria-label="Interés en porcentaje" required>
                                 <div class="invalid-feedback" aria-live="polite">Error: Por favor, ingrese un interés válido.</div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Calcular</button>
+                            <button type="submit" class="btn btn-primary" >Calcular</button>
                         </form>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-12 mt-5 px-lg-4">
-                    <div id="contenedor-resultado" class="result-box text-white" role="region"  aria-live="polite" aria-atomic="true">
-                        <div id="resultado-hipoteca" aria-live="polite" aria-atomic="true">
-                            <!-- Aquí se mostrará el resultado de la hipoteca -->
-                        </div>
-                        <div id="cuota-mensual" aria-live="polite" aria-atomic="true">
-                            <!-- Aquí se mostrará la cuota mensual -->
-                        </div>
+                    <div id="contenedor-resultado" class="result-box text-white" >
+                        <h2 id="nombre"  tabindex="0">Resultado de la  Hipoteca</h2>
+                        <div id="resultado-hipoteca" aria-live="polite" tabindex="0" aria-atomic="true" ></div>
+                        <div id="cuota-mensual" aria-live="polite" tabindex="0" aria-atomic="true"></div>
+                    </div>
+                </div>
                     </div>
                 </div>
             </div>
@@ -206,10 +205,10 @@
             <div class="box">
                 <h2 tabindex="0">Síguenos</h2>
                 <div class="redes-social">
-                    <a href="https://www.twitter.com" target="_blank" class="bi bi-twitter" aria-label="Twitter"></a>
-                    <a href="https://www.facebook.com" target="_blank" class="bi bi-facebook" aria-label="Facebook"></a>
+                    <a href="https://www.twitter.com" target="_blank"  class="bi bi-twitter" aria-label="Twitter"></a>
+                    <a href="https://www.facebook.com" target="_blank"     class="bi bi-facebook" aria-label="Facebook"></a>
                     <a href="https://www.instagram.com" target="_blank" class="bi bi-instagram" aria-label="Instagram"></a>
-                    <a href="https://www.linkedin.com" target="_blank" class="bi bi-linkedin" aria-label="LinkedIn"></a>
+                    <a href="https://www.linkedin.com" target="_blank"   class="bi bi-linkedin" aria-label="LinkedIn"></a>
                 </div>
             </div>
         </div>
