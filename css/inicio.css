@@ -86,10 +86,10 @@ label{
 }
 
 .small-input {
-    width: 100px; /* Adjust the width as needed */
+    width: 100px; 
     padding: 5px;
     margin: 5px;
-    font-size: 14px; /* Adjust font size as needed */
+    font-size: 14px;
 }
 
 /* Estilos para el contenedor del filtro */

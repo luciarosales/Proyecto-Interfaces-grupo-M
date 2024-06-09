@@ -4,7 +4,7 @@ class Piso {
         this.id = id;
         this.nombre = nombre;
         this.operacion = operacion;
-        this.municipio = municipio; // No es necesario modificar aquí
+        this.municipio = municipio; 
         this.calle = calle;
         this.tipo = tipo;
         this.numHabitaciones = numHabitaciones;
@@ -45,19 +45,15 @@ const distritosPorMunicipio = {
     Mijas: ["Las Lagunas", "Mijas Pueblo", "La Cala"]
 };
 
-// Store pisos array in localStorage
 localStorage.setItem('pisos', JSON.stringify(pisos));
 
-// Function to generate HTML for displaying the information of each floor
 function generateHTMLForPisos(pisosMostrados) {
     const pisosContainer = document.getElementById("pisosContainer");
     pisosContainer.innerHTML = ""; // Limpiar el contenido actual
 
-    // Update the total number of pisos displayed
     const totalPisosCount = document.getElementById("totalPisosCount");
     totalPisosCount.textContent = pisosMostrados.length;
 
-    // Iterate over each floor and generate HTML to display its information
     pisosMostrados.forEach((piso, index) => {
         var foto = "img/Casas/casa" + piso.id + ".jpg";
         const precioTexto = piso.operacion.toLowerCase() === 'alquiler' ? `${piso.precio} €/mes` : `${piso.precio} €`;
@@ -84,12 +80,10 @@ function generateHTMLForPisos(pisosMostrados) {
 }
 
 
-// Function to save the pisoId to localStorage
 function guardarPisoId(pisoId) {
     localStorage.setItem('pisoId', pisoId);
 }
 
-// Function to apply filters based on search criteria
 function aplicarFiltros() {
     const filtroEstado = document.getElementById("filtroEstado").value.toLowerCase();
     const filtroOperacion = document.getElementById("filtroOperacion").value.toLowerCase();
@@ -162,7 +156,6 @@ function aplicarFiltros() {
     generateHTMLForPisos(pisosFiltrados);
 }
 
-// Function to clear all filters and reset to default state
 function eliminarFiltros() {
     document.getElementById("filtroEstado").value = 'cualquiera';
     document.getElementById("filtroOperacion").value = 'cualquiera';
@@ -180,15 +173,12 @@ function eliminarFiltros() {
     generateHTMLForPisos(pisos);
 }
 
-// Function to handle the confirmation action
 function handleConfirmarEliminarFiltros() {
     eliminarFiltros();
-    // Close the modal after confirming
     const eliminarFiltrosModal = new bootstrap.Modal(document.getElementById('eliminarFiltrosModal'));
     eliminarFiltrosModal.hide();
 }
 
-// Attach the necessary event listeners
 document.addEventListener('DOMContentLoaded', () => {
     generateHTMLForPisos(pisos);
 
@@ -225,16 +215,13 @@ document.getElementById('filtroMunicipio').addEventListener('change', function()
 });
 
 
-// Attach the eliminarFiltros function to the 'click' event of the "Eliminar Filtros" button
 
-// Function to navigate to the detailed information page of a floor
 function verDetallePiso(index) {
     const pisoSeleccionado = pisos[index];
     localStorage.setItem('pisoSeleccionado', JSON.stringify(pisoSeleccionado));
     window.location.href = 'detalle_piso.html';
 }
 
-// Attach the generateHTMLForPisos function to the 'DOMContentLoaded' event
 document.addEventListener('DOMContentLoaded', () => {
     generateHTMLForPisos(pisos);
 

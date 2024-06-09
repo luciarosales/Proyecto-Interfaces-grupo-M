@@ -1,7 +1,6 @@
 const ariaMessage = document.getElementById('ariaMessage');
 
 document.getElementById('btnAplicarFiltros').addEventListener('click', function() {
-    // Aquí puedes agregar tu lógica para aplicar los filtros
 
     // Actualizar el mensaje ARIA
     ariaMessage.textContent = 'Filtros aplicados';
@@ -18,7 +17,6 @@ document.getElementById('btnEliminarFiltros').addEventListener('click', function
 });
 
 document.getElementById('confirmarEliminarFiltros').addEventListener('click', function() {
-    // Aquí puedes agregar tu lógica para eliminar los filtros
 
     // Actualizar el mensaje ARIA
     ariaMessage.textContent = 'Filtros eliminados';

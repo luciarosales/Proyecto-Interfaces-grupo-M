@@ -83,7 +83,7 @@
 }
 
 .modal-content p {
-    margin-right: 5%; /* Ajusta este valor según sea necesario */
+    margin-right: 5%; 
 }
 
 
@@ -93,8 +93,8 @@
     font-weight: bold;
     cursor: pointer;
     position: absolute; /* Posicionamiento absoluto */
-    top: 10px; /* Ajusta este valor según sea necesario */
-    right: 10px; /* Ajusta este valor para moverlo hacia la derecha */
+    top: 10px; 
+    right: 10px;
     border: none; /* Eliminar el borde */
     background: none; /* Eliminar el fondo */
     text-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Añadir sombra roja */
@@ -116,8 +116,8 @@
     font-size: 36px;
     cursor: pointer;
     position: fixed;
-    right: 20px; /* Ajusta este valor para la distancia desde el borde derecho */
-    bottom: 20px; /* Ajusta este valor para la distancia desde el borde inferior */
+    right: 20px;
+    bottom: 20px; 
     z-index: 1001;
     display: flex;
     justify-content: center;
@@ -134,10 +134,10 @@
     background-color: #f9f9f9;
     padding: 10px;
     position: fixed;
-    bottom: 80px; /* Ajustado para que el contenido aparezca por encima del botón */
-    right: 20px; /* Ajustado para que esté alineado con el botón */
+    bottom: 80px;
+    right: 20px; 
     border-radius: 8px;
-    max-width: 200px; /* Asegura que el contenido no desborde en pantallas pequeñas */
+    max-width: 200px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadido sombra para mejor visibilidad */
     z-index: 1000; /* Asegura que el contenido esté detrás del botón */
 }

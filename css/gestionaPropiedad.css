@@ -30,8 +30,8 @@
     font-size: 36px;
     cursor: pointer;
     position: fixed;
-    right: 20px; /* Ajusta este valor para la distancia desde el borde derecho */
-    bottom: 20px; /* Ajusta este valor para la distancia desde el borde inferior */
+    right: 20px;
+    bottom: 20px;
     z-index: 1001;
     display: flex;
     justify-content: center;
@@ -48,8 +48,8 @@
     background-color: #f9f9f9;
     padding: 10px;
     position: fixed;
-    bottom: 80px; /* Ajustado para que el contenido aparezca por encima del botón */
-    right: 20px; /* Ajustado para que esté alineado con el botón */
+    bottom: 80px;
+    right: 20px;
     border-radius: 8px;
     max-width: 200px; /* Asegura que el contenido no desborde en pantallas pequeñas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadido sombra para mejor visibilidad */
