@@ -180,6 +180,28 @@ function eliminarFiltros() {
     generateHTMLForPisos(pisos);
 }
 
+// Function to handle the confirmation action
+function handleConfirmarEliminarFiltros() {
+    eliminarFiltros();
+    // Close the modal after confirming
+    const eliminarFiltrosModal = new bootstrap.Modal(document.getElementById('eliminarFiltrosModal'));
+    eliminarFiltrosModal.hide();
+}
+
+// Attach the necessary event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    generateHTMLForPisos(pisos);
+
+    // Asociar evento click al botón "Aplicar Filtros"
+    const btnAplicarFiltros = document.getElementById('btnAplicarFiltros');
+    btnAplicarFiltros.addEventListener('click', aplicarFiltros);
+
+    // Asociar evento click al botón "Aceptar" del modal de confirmación
+    const confirmarEliminarFiltros = document.getElementById("confirmarEliminarFiltros");
+    confirmarEliminarFiltros.addEventListener('click', handleConfirmarEliminarFiltros);
+});
+
+
 // Actualiza los distritos disponibles según el municipio seleccionado
 document.getElementById('filtroMunicipio').addEventListener('change', function() {
     const municipioSeleccionado = this.value;
@@ -204,7 +226,6 @@ document.getElementById('filtroMunicipio').addEventListener('change', function()
 
 
 // Attach the eliminarFiltros function to the 'click' event of the "Eliminar Filtros" button
-document.getElementById('btnEliminarFiltros').addEventListener('click', eliminarFiltros);
 
 // Function to navigate to the detailed information page of a floor
 function verDetallePiso(index) {
