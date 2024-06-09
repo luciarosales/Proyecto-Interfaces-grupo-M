@@ -87,9 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const pagoMensual = (intMensual * dineroPago) / (1 - Math.pow(1 + intMensual, -numPlazos));
             const hipoteca = pagoMensual * numPlazos;
             
-            nombre.innerHTML = `
-            <p>Resultado Hipoteca</p>
-        `;
+         
             resultadoHipoteca.innerHTML = `
                
                 <p>El pago total por la hipoteca será de: ${hipoteca.toFixed(2)} euros</p>
