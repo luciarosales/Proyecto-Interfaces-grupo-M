@@ -60,8 +60,8 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12 col-12 mx-auto mt-5">
                     <div class="about-text text-white mt-5">
-                        <h2 tabindex="0">Calculadora de hipoteca</h2>
-                        <p tabindex="0">Con nuestra calculadora de hipoteca podrás realizar una estimación del coste
+                        <h2 tabindex="1" >Calculadora de hipoteca</h2>
+                        <p tabindex="1">Con nuestra calculadora de hipoteca podrás realizar una estimación del coste
                             mensual de comprar un inmueble con hipoteca. Te permitirá saber si te es rentable y
                             accesible para comenzar con el proceso de solicitud de hipoteca de tu próximo inmueble.</p>
                     </div>
@@ -82,7 +82,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-house-door-fill"></i>
-                                    <h3 id="valor-hipotecario-titulo" class="card-title" tabindex="0">Valor hipotecario</h3>
+                                    <h3 id="valor-hipotecario-titulo" class="card-title" tabindex="1">Valor hipotecario</h3>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-cash-coin"></i>
-                                    <h3 id="ahorro-aportado-titulo" class="card-title" tabindex="0">Ahorro aportado</h3>
+                                    <h3 id="ahorro-aportado-titulo" class="card-title" tabindex="1">Ahorro aportado</h3>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-calendar2-check-fill"></i>
-                                    <h3 id="plazo-anios-titulo" class="card-title" tabindex="0">Plazo en años</h3>
+                                    <h3 id="plazo-anios-titulo" class="card-title" tabindex="1">Plazo en años</h3>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-graph-up-arrow"></i>
-                                    <h3 id="tipo-interes-titulo" class="card-title" tabindex="0">Tipo de interés</h3>
+                                    <h3 id="tipo-interes-titulo" class="card-title" tabindex="1">Tipo de interés</h3>
                                 </div>
                             </div>
                         </div>
@@ -123,12 +123,12 @@
         <!-- Contenido del modal -->
         <div class="modal-content">
             <p id="modal-content-paragraph"></p>
-            <button class="close" onclick="closeModal()" aria-label="Cerrar ventana" tabindex="7">×</button>
+            <button class="close" onclick="closeModal()" aria-label="Cerrar ventana" tabindex="0">×</button>
         </div>
     </div>
 
     <!--BOTÓN AYUDA-->
-    <button class="help-button" onclick="toggleHelp()" aria-expanded="false">
+    <button class="help-button" onclick="toggleHelp()" aria-expanded="false" tabindex="0">
         <span class="help-icon">?</span>
     </button>
     
@@ -146,26 +146,26 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-12 col-12 px-lg-4">
-                    <div class="about-text text-white">
-                        <h2>Calculadora de Hipoteca</h2>
+                    <div class="about-text text-white" >
+                        <h2>Calculadora de Hipoteca </h2>
                         <form id="hipoteca-form" novalidate>
                             <div class="mb-3">
-                                <label for="value" class="form-label">Valor hipotecario en euros <span class="text-danger">*</span></label>
-                                <input type="number" class="form-control form-control-sm input-short" id="value" aria-label="Valor hipotecario" required>
+                                <label for="value" class="form-label">Valor hipotecario en euros <span class="text-danger" >*</span></label>
+                                <input type="number" class="form-control form-control-sm input-short" id="value" aria-label="Valor hipotecario" >
                                 <div class="invalid-feedback" aria-live="polite">Error: Por favor, ingrese un valor hipotecario válido.</div>
                             </div>
                             <div class="mb-3">
-                                <label for="savings" class="form-label">Ahorro aportado en euros <span class="text-danger">*</span></label>
-                                <input type="number" class="form-control form-control-sm input-short" id="savings" aria-label="Ahorro aportado" required>
+                                <label for="savings" class="form-label">Ahorro aportado en euros <span class="text-danger" >*</span></label>
+                                <input type="number" class="form-control form-control-sm input-short" id="savings" aria-label="Ahorro aportado"  required>
                                 <div class="invalid-feedback" aria-live="polite">Error: Por favor, ingrese un ahorro aportado válido, menor que el valor hipotecario.</div>
                             </div>
                             <div class="mb-3">
-                                <label for="years" class="form-label">Plazo en años <span class="text-danger">*</span></label>
+                                <label for="years" class="form-label">Plazo en años <span class="text-danger" >*</span></label>
                                 <input type="number" class="form-control form-control-sm input-short" id="years" aria-label="Plazo en años" required>
                                 <div class="invalid-feedback" aria-live="polite">Error: Por favor, ingrese un plazo en años válido.</div>
                             </div>
                             <div class="mb-3">
-                                <label for="interest" class="form-label">Interés en porcentaje <span class="text-danger">*</span></label>
+                                <label for="interest" class="form-label">Interés en porcentaje <span class="text-danger" >*</span></label>
                                 <input type="number" class="form-control form-control-sm input-short" id="interest" aria-label="Interés en porcentaje" required>
                                 <div class="invalid-feedback" aria-live="polite">Error: Por favor, ingrese un interés válido.</div>
                             </div>
@@ -174,7 +174,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-12 mt-5 px-lg-4">
-                    <div id="contenedor-resultado" class="result-box text-white" role="region" tabindex="0" aria-live="polite" aria-atomic="true">
+                    <div id="contenedor-resultado" class="result-box text-white" role="region"  aria-live="polite" aria-atomic="true">
                         <div id="resultado-hipoteca" aria-live="polite" aria-atomic="true">
                             <!-- Aquí se mostrará el resultado de la hipoteca -->
                         </div>
