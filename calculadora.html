@@ -60,8 +60,8 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12 col-12 mx-auto mt-5">
                     <div class="about-text text-white mt-5">
-                        <h2 tabindex="1" >Calculadora de hipoteca</h2>
-                        <p tabindex="1">Con nuestra calculadora de hipoteca podrás realizar una estimación del coste
+                        <h2 tabindex="0" >Calculadora de hipoteca</h2>
+                        <p tabindex="0">Con nuestra calculadora de hipoteca podrás realizar una estimación del coste
                             mensual de comprar un inmueble con hipoteca. Te permitirá saber si te es rentable y
                             accesible para comenzar con el proceso de solicitud de hipoteca de tu próximo inmueble.</p>
                     </div>
@@ -82,7 +82,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-house-door-fill"></i>
-                                    <h3 id="valor-hipotecario-titulo" class="card-title" tabindex="2">Valor hipotecario</h3>
+                                    <h3 id="valor-hipotecario-titulo" class="card-title" tabindex="0">Valor hipotecario</h3>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-cash-coin"></i>
-                                    <h3 id="ahorro-aportado-titulo" class="card-title" tabindex="2">Ahorro aportado</h3>
+                                    <h3 id="ahorro-aportado-titulo" class="card-title" tabindex="0">Ahorro aportado</h3>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-calendar2-check-fill"></i>
-                                    <h3 id="plazo-anios-titulo" class="card-title" tabindex="2">Plazo en años</h3>
+                                    <h3 id="plazo-anios-titulo" class="card-title" tabindex="0">Plazo en años</h3>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                             <div class="card text-white text-center bg-dark pb-2">
                                 <div class="card-body">
                                     <i class="bi bi-graph-up-arrow"></i>
-                                    <h3 id="tipo-interes-titulo" class="card-title" tabindex="2">Tipo de interés</h3>
+                                    <h3 id="tipo-interes-titulo" class="card-title" tabindex="0">Tipo de interés</h3>
                                 </div>
                             </div>
                         </div>
@@ -121,14 +121,14 @@
     <!-- Modal -->
     <div id="modal" class="modal">
         <!-- Contenido del modal -->
-        <div class="modal-content">
-            <p id="modal-content-paragraph"></p>
+        <div class="modal-content" tabindex="-1">
+            <p id="modal-content-paragraph" tabindex="0"></p>
             <button class="close" onclick="closeModal()" aria-label="Cerrar ventana" tabindex="0">×</button>
         </div>
     </div>
 
     <!--BOTÓN AYUDA-->
-    <button class="help-button" onclick="toggleHelp()" aria-expanded="false" tabindex="0">
+    <button class="help-button" aria-label="Botón de ayuda" onclick="toggleHelp()" aria-expanded="false" tabindex="0">
         <span class="help-icon">?</span>
     </button>
     
@@ -175,7 +175,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-12 mt-5 px-lg-4">
                     <div id="contenedor-resultado" class="result-box text-white" >
-                        <h2 id="nombre"  tabindex="0">Resultado de la  Hipoteca</h2>
+                        <h2 id="nombre"tabindex="0">Resultado de la  Hipoteca</h2>
                         <div id="resultado-hipoteca" aria-live="polite" tabindex="0" aria-atomic="true" ></div>
                         <div id="cuota-mensual" aria-live="polite" tabindex="0" aria-atomic="true"></div>
                     </div>
