@@ -116,68 +116,35 @@ function mostrarContenido(parrafo) {
     var modalContentParagraph = document.getElementById('modal-content-paragraph');
     modalContentParagraph.textContent = parrafo;
     document.getElementById('modal').style.display = 'block';
-
-     // Asignar un tabindex alto al contenido del modal para que sea enfocado primero
-     modalContentParagraph.setAttribute('tabindex', '10');
-
-     // Eliminar temporalmente tabindex de otros elementos
-     valorHipotecarioTitulo.removeAttribute('tabindex');
-     ahorroAportadoTitulo.removeAttribute('tabindex');
-     plazoAniosTitulo.removeAttribute('tabindex');
-     tipoInteresTitulo.removeAttribute('tabindex');
+    modalContentParagraph.focus();
 }
 
 // Función para ocultar el contenido del párrafo en la ventana modal
 function ocultarContenido() {
     document.getElementById('modal').style.display = 'none';
-
-    // Restaurar tabindex de otros elementos
-    valorHipotecarioTitulo.setAttribute('tabindex', '3');
-    ahorroAportadoTitulo.setAttribute('tabindex', '4');
-    plazoAniosTitulo.setAttribute('tabindex', '5');
-    tipoInteresTitulo.setAttribute('tabindex', '6');
-
-    // Eliminar tabindex del contenido del modal
-    var modalContentParagraph = document.getElementById('modal-content-paragraph');
-    modalContentParagraph.removeAttribute('tabindex');
+    if (lastFocusedElement) {
+        lastFocusedElement.focus(); 
+    }
 }
 
 // Asignar eventos de clic a los títulos
-valorHipotecarioTitulo.addEventListener('click', function() {
-    mostrarContenido('Es el precio estimado por una empresa acreditada mediante una tasación. Este precio se fija y será la cantidad máxima que el banco prestará para la operación. Este precio puede ser mayor o menor que el valor de venta, ya que el valor hipotecario ha de ser un valor objetivo y sin especulaciones.');
-});
-valorHipotecarioTitulo.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        mostrarContenido('Es el precio estimado por una empresa acreditada mediante una tasación. Este precio se fija y será la cantidad máxima que el banco prestará para la operación. Este precio puede ser mayor o menor que el valor de venta, ya que el valor hipotecario ha de ser un valor objetivo y sin especulaciones.');
-    }
-});
+function addModalEventListeners(element, content) {
+    element.addEventListener('click', function() {
+        lastFocusedElement = element;
+        mostrarContenido(content);
+    });
+    element.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            lastFocusedElement = element;
+            mostrarContenido(content);
+        }
+    });
+}
 
-ahorroAportadoTitulo.addEventListener('click', function() {
-    mostrarContenido('Es la cantidad de dinero que tú como comprador de la vivienda deberás de aportar antes de que se te conceda un préstamo bancario para la hipoteca. Está fijado que, como mínimo, deberás aportar el 20% del valor hipotecario del inmueble.');
-});
-ahorroAportadoTitulo.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        mostrarContenido('Es la cantidad de dinero que tú como comprador de la vivienda deberás de aportar antes de que se te conceda un préstamo bancario para la hipoteca. Está fijado que, como mínimo, deberás aportar el 20% del valor hipotecario del inmueble.');
-    }
-});
-
-plazoAniosTitulo.addEventListener('click', function() {
-    mostrarContenido('Es el número de años fijado para pagar el coste total de la hipoteca, de donde se calcularán el número de cuotas mensuales que se deberán pagar en total y el precio en cada una de estas cuotas.');
-});
-plazoAniosTitulo.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        mostrarContenido('Es el número de años fijado para pagar el coste total de la hipoteca, de donde se calcularán el número de cuotas mensuales que se deberán pagar en total y el precio en cada una de estas cuotas.');
-    }
-});
-
-tipoInteresTitulo.addEventListener('click', function() {
-    mostrarContenido('El interés es la cantidad a pagar adicionalmente cada mes como remuneración de la concesión de un préstamo. Este interés puede ser fijo o variable.');
-});
-tipoInteresTitulo.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        mostrarContenido('El interés es la cantidad a pagar adicionalmente cada mes como remuneración de la concesión de un préstamo. Este interés puede ser fijo o variable.');
-    }
-});
+addModalEventListeners(valorHipotecarioTitulo, 'Es el precio estimado por una empresa acreditada mediante una tasación. Este precio se fija y será la cantidad máxima que el banco prestará para la operación. Este precio puede ser mayor o menor que el valor de venta, ya que el valor hipotecario ha de ser un valor objetivo y sin especulaciones.');
+addModalEventListeners(ahorroAportadoTitulo, 'Es la cantidad de dinero que tú como comprador de la vivienda deberás de aportar antes de que se te conceda un préstamo bancario para la hipoteca. Está fijado que, como mínimo, deberás aportar el 20% del valor hipotecario del inmueble.');
+addModalEventListeners(plazoAniosTitulo, 'Es el número de años fijado para pagar el coste total de la hipoteca, de donde se calcularán el número de cuotas mensuales que se deberán pagar en total y el precio en cada una de estas cuotas.');
+addModalEventListeners(tipoInteresTitulo, 'El interés es la cantidad a pagar adicionalmente cada mes como remuneración de la concesión de un préstamo. Este interés puede ser fijo o variable.');
 
 
 // Cerrar el modal haciendo clic en la "x"
