@@ -52,6 +52,33 @@
 }
 
 
+.input-short {
+    max-width: 200px;
+}
+
+#filtroPrecioDesde {
+    max-width: 100px;
+}
+
+#filtroPrecioHasta {
+    max-width: 100px;
+}
+
+#filtroBanos {
+    max-width: 50px;
+}
+
+#filtroHabitaciones {
+    max-width: 50px;
+}
+
+#filtroSuperficieDesde {
+    max-width: 80px;
+}
+
+#filtroSuperficieHasta {
+    max-width: 80px;
+}
 
 label{
     color: white;
